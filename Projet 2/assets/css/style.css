@@ -1,0 +1,20 @@
+/*
+
+color:
+    bleu: #0065FC
+    bleu clair: #DEEBFF
+    gris: #F2F2F2
+
+taille:
+    desktop: 992px
+    tablette: 768px
+    smartphone: en dessous
+
+*/
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+/* .link {
+} */
