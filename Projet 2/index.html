@@ -5,17 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <title>Booki</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-            integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
-            crossorigin="anonymous"
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;700&display=swap"
             rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
         <link href="./assets/css/style.css" rel="stylesheet" />
     </head>
@@ -27,5 +28,35 @@
                 <a href="#"><p>Activités</p></a>
             </div>
         </header>
+        <main>
+            <section id="recherche">
+                <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <form>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="Rechercher" id="search" value="Marseille,France" />
+                    <input type="button" value="Rechercher" />
+                </form>
+                <div class="filters">
+                    <p>Filtres</p>
+                    <div class="filter">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <button>Economique</button>
+                    </div>
+                    <div class="filter">
+                        <i class="fa-solid fa-child-reaching"></i>
+                        <button>Familial</button>
+                    </div>
+                    <div class="filter">
+                        <i class="fa-solid fa-heart"></i>
+                        <button>Romantique</button>
+                    </div>
+                    <div class="filter">
+                        <i class="fa-solid fa-dog"></i>
+                        <button>Animaux autorisés</button>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>

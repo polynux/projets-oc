@@ -87,3 +87,15 @@ header {
 .link-active > p {
     color: #0065fc;
 }
+
+main {
+    margin: 0 50px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#recherche > p {
+    margin: 0;
+}
