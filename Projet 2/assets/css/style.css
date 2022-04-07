@@ -26,6 +26,30 @@ header {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header > a {
+        align-self: center;
+    }
+
+    .link > a {
+        width: 100%;
+    }
+
+    .link-active {
+        border-bottom: 5px solid #0065fc;
+        border-top: unset !important;
+    }
+
+    .link > a:hover {
+        border-bottom: 5px solid #0065fc;
+        border-top: unset !important;
+    }
+}
+
 #logo {
     width: 125px;
     padding: 30px 60px;
@@ -47,16 +71,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: content-box;
+    margin-top: 3px;
 }
 
 .link > a:hover {
     color: #0065fc;
-    border-top: 5px solid #0065fc;
+    border-top: 3px solid #0065fc;
 }
 
 .link-active {
     color: #0065fc;
-    border-top: 5px solid #0065fc;
+    border-top: 3px solid #0065fc;
 }
 .link-active > p {
     color: #0065fc;
