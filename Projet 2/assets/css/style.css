@@ -99,3 +99,41 @@ h1 {
 #recherche > p {
     margin: 0;
 }
+
+form {
+    margin: 20px 0;
+    display: flex;
+}
+
+.location-icon {
+    background-color: #f2f2f2;
+    width: fit-content;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 20px;
+}
+
+#search-area {
+    border: 1px solid #f2f2f2;
+    border-right: 0;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+}
+#search-area:focus {
+    outline-color: #0065fc;
+}
+
+#search-btn {
+    color: white;
+    background-color: #0065fc;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: "Raleway", sans-serif;
+    padding: 15px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+}

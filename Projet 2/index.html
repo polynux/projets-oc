@@ -33,9 +33,11 @@
                 <h1>Trouver votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
                 <form>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" name="Rechercher" id="search" value="Marseille,France" />
-                    <input type="button" value="Rechercher" />
+                    <div class="location-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <input type="text" name="Rechercher" id="search-area" value="Marseille, France" />
+                    <input type="button" id="search-btn" value="Rechercher" />
                 </form>
                 <div class="filters">
                     <p>Filtres</p>
@@ -64,7 +66,11 @@
 
             <section id="places">
                 <div id="popular">
-                    <h2>Les plus populaires</h2>
+                    <div>
+                        <h2>Les plus populaires</h2>
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
                     <div class="cards">
                         <a class="card" href="#">
                             <img src="" alt="Chambre" />
