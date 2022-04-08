@@ -341,4 +341,26 @@ form {
 
 footer {
     background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer > nav {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 300px;
+    row-gap: 10px;
+}
+
+footer > nav > * {
+    color: black;
+    margin: 0;
+}
+
+footer > nav > h3 {
+    margin-bottom: 20px;
 }
