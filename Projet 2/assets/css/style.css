@@ -201,12 +201,14 @@ form {
 }
 
 #city-places {
-    flex-grow: 2;
+    /* flex-grow: 60%; */
+    width: 60%;
 }
 
 #popular {
-    flex-grow: 1;
-    min-width: 420px;
+    /* flex-grow: 30%; */
+    /* min-width: 420px; */
+    width: 30%;
 }
 
 .card-list {
@@ -235,7 +237,7 @@ form {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 50px;
-    height: fit-content;
+    /* height: fit-content; */
 }
 
 .card {
@@ -244,21 +246,22 @@ form {
     padding: 5px;
     display: flex;
     box-shadow: 0 3px 15px #d8d8d8;
-    width: 300px;
+    max-width: 30%;
+    width: 100%;
     flex-direction: column;
 }
 
 .card > img {
     width: 100%;
     height: 100%;
-    max-height: 130px;
+    max-height: 150px;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
 .popular-card {
-    max-width: 450px;
+    max-width: 100%;
     background-color: white;
     border-radius: 30px;
     padding: 5px;
@@ -269,8 +272,8 @@ form {
 
 .popular-card > img {
     width: 100%;
-    max-width: 140px;
-    height: 150px;
+    max-width: 190px;
+    height: 190px;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
