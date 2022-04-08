@@ -147,6 +147,8 @@ form {
     font-weight: bold;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
 }
 
 .filter {
@@ -177,4 +179,18 @@ form {
     min-width: 20px;
     text-align: center;
     margin: -2px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.info > .fa-solid {
+    color: #0065fc;
+    border: 1px solid #d8d8d8;
+    border-radius: 20px;
+    padding: 5px 11px;
+    margin: 10px;
 }
