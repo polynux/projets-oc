@@ -316,8 +316,8 @@ form {
 
 .activity-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    /* flex-wrap: wrap; */
+    gap: 50px;
 }
 
 .activity-card > p {
@@ -329,7 +329,7 @@ form {
 .activity-card > img {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    max-height: 300px;
+    max-height: 600px;
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -340,6 +340,34 @@ form {
     box-shadow: 0 3px 15px #d8d8d8;
     width: 23%;
     min-width: 350px;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.second-column > a {
+    width: auto;
+}
+
+.last-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.last-column > a {
+    width: auto;
+}
+
+.second-column > a > img {
+    max-height: 200px;
+}
+
+.last-column > a > img {
+    max-height: 200px;
 }
 
 footer {
