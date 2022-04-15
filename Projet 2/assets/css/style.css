@@ -498,6 +498,16 @@ footer > nav > h3 {
     }
 }
 
+.search-icon {
+    visibility: hidden;
+    background-color: #0065fc;
+    width: fit-content;
+    padding: 0;
+    border-radius: 38px;
+    font-size: 38px;
+    color: white;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 30px;
@@ -511,5 +521,31 @@ footer > nav > h3 {
     }
     footer > nav > a {
         margin-bottom: 10px;
+    }
+
+    #search-area {
+        font-size: 36px;
+        padding: 30px;
+    }
+    .location-icon {
+        border-top-left-radius: 38px;
+        border-bottom-left-radius: 38px;
+    }
+    .location-icon > i {
+        margin: 15px;
+        font-size: 38px;
+    }
+    #search-btn {
+        visibility: hidden;
+    }
+    .search-icon {
+        visibility: visible;
+        transform: translateX(-170px);
+        padding: 30px 34px;
+    }
+
+    form {
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
