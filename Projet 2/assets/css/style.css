@@ -318,8 +318,18 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+}
+
+.column {
+    display: flex;
     flex-direction: column;
-    height: 600px;
+    gap: 50px;
+    flex-grow: 1;
+    max-width: 33%;
+}
+
+.column > a {
+    max-width: 100%;
 }
 
 .activity-card > p {
@@ -331,7 +341,6 @@ form {
 .activity-card > img {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    /* max-height: 600px; */
     height: 90%;
     object-fit: cover;
     width: 100%;
@@ -340,37 +349,92 @@ form {
 .activity-card {
     border-radius: 30px;
     box-shadow: 0 3px 15px #d8d8d8;
-    width: 22.9%;
+    flex-grow: 1;
     min-width: 350px;
-    height: inherit;
+    max-width: 23%;
+    height: 600px;
+}
+
+@media (max-width: 1674px) {
+    .activity-card {
+        max-width: 31%;
+    }
+    .col-2 {
+        flex-direction: row;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1284px) {
+    .activity-card {
+        max-width: 48%;
+    }
+    .col-1 {
+        max-width: 48%;
+    }
+    .col-2 {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 869px) {
+    .activity-cards {
+        flex-direction: column;
+    }
+    .activity-cards > * {
+        max-width: 100%;
+    }
+    .activity-card {
+        height: 275px;
+    }
+    .activity-card > img {
+        height: 215px;
+    }
+    .activity-var-1 {
+        height: 275px !important;
+    }
+    .activity-var-1 > img {
+        height: 215px !important;
+    }
+    .activity-var-2 {
+        height: 275px !important;
+    }
+    .activity-var-2 > img {
+        height: 215px !important;
+    }
 }
 
 .activity-var-1 {
-    height: 58.5%;
+    height: 350px;
+    width: 100%;
 }
 .activity-var-1 > img {
-    height: 83%;
+    height: 290px;
 }
 
 .activity-var-2 {
-    height: 33%;
+    height: 200px;
+    width: 100%;
 }
 .activity-var-2 > img {
-    height: 70%;
+    height: 139px;
 }
 
 .activity-var-3 {
-    height: 45%;
+    height: 275px;
+    width: 100%;
 }
 .activity-var-3 > img {
-    height: 78%;
+    height: 215px;
 }
 
 .activity-var-4 {
-    height: 46.5%;
+    height: 275px;
+    width: 100%;
 }
 .activity-var-4 > img {
-    height: 79%;
+    height: 215px;
 }
 
 footer {
