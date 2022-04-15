@@ -316,8 +316,10 @@ form {
 
 .activity-cards {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 50px;
+    flex-direction: column;
+    height: 600px;
 }
 
 .activity-card > p {
@@ -329,8 +331,8 @@ form {
 .activity-card > img {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    max-height: 600px;
-    height: 100%;
+    /* max-height: 600px; */
+    height: 90%;
     object-fit: cover;
     width: 100%;
 }
@@ -338,36 +340,37 @@ form {
 .activity-card {
     border-radius: 30px;
     box-shadow: 0 3px 15px #d8d8d8;
-    width: 23%;
+    width: 22.9%;
     min-width: 350px;
+    height: inherit;
 }
 
-.second-column {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.activity-var-1 {
+    height: 58.5%;
+}
+.activity-var-1 > img {
+    height: 83%;
 }
 
-.second-column > a {
-    width: auto;
+.activity-var-2 {
+    height: 33%;
+}
+.activity-var-2 > img {
+    height: 70%;
 }
 
-.last-column {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.activity-var-3 {
+    height: 45%;
+}
+.activity-var-3 > img {
+    height: 78%;
 }
 
-.last-column > a {
-    width: auto;
+.activity-var-4 {
+    height: 46.5%;
 }
-
-.second-column > a > img {
-    max-height: 200px;
-}
-
-.last-column > a > img {
-    max-height: 200px;
+.activity-var-4 > img {
+    height: 79%;
 }
 
 footer {
