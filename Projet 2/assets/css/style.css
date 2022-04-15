@@ -147,7 +147,7 @@ form {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .filter {
@@ -161,8 +161,14 @@ form {
 
 .filter:hover {
     cursor: pointer;
-    border: 2px solid #0065fc;
-    padding: 3px;
+    /* border: 2px solid #0065fc;
+    padding: 3px; */
+    background-color: #dfdfdf;
+}
+
+.filter:hover .fa-solid {
+    background-color: #bed6fa;
+    border-color: #bed6fa;
 }
 
 .filter-btn {
@@ -178,6 +184,7 @@ form {
     min-width: 20px;
     text-align: center;
     margin: -2px;
+    transition: all 0.2s ease-in-out;
 }
 
 .info {
@@ -190,9 +197,10 @@ form {
     color: #0065fc;
     border: 1px solid #d8d8d8;
     border-radius: 20px;
-    padding: 5px 11px;
+    padding: 4px 9px;
     margin: 10px;
     margin-left: 0;
+    font-size: 0.9em;
 }
 
 #places {
@@ -572,6 +580,15 @@ footer > nav > h3 {
     .filters > p {
         width: 100%;
     }
+
+    .filters {
+        margin-bottom: 0;
+    }
+
+    .info {
+        margin-top: 0;
+    }
+
     .filter {
         margin-bottom: 30px;
         margin-left: 0;
