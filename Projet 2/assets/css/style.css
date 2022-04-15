@@ -380,6 +380,12 @@ form {
     transform: scale3d(1.1, 1.1, 1);
 }
 
+@media (max-width: 1699px) {
+    .card {
+        max-width: calc(50% - 30px);
+    }
+}
+
 @media (max-width: 1674px) {
     .activity-card {
         max-width: 31%;
@@ -387,6 +393,22 @@ form {
     .col-2 {
         flex-direction: row;
         max-width: 100%;
+    }
+}
+
+@media (max-width: 1600px) {
+    #popular {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1400px) {
+    #places {
+        flex-direction: column;
+    }
+
+    .cards {
+        width: auto !important;
     }
 }
 
