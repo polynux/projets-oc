@@ -548,4 +548,12 @@ footer > nav > h3 {
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
+    .filters > p {
+        width: 100%;
+    }
+    .filter {
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
 }
