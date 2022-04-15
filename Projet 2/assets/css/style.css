@@ -90,7 +90,6 @@ header {
 
 main {
     margin: 0 50px;
-    overflow: hidden;
 }
 
 h1 {
@@ -193,6 +192,7 @@ form {
     border-radius: 20px;
     padding: 5px 11px;
     margin: 10px;
+    margin-left: 0;
 }
 
 #places {
@@ -251,6 +251,7 @@ form {
     max-width: 30%;
     width: 100%;
     flex-direction: column;
+    transition: transform 0.5s;
 }
 
 .card > img {
@@ -262,6 +263,10 @@ form {
     border-top-right-radius: 25px;
 }
 
+.card:hover {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
 .popular-card {
     max-width: 100%;
     background-color: white;
@@ -270,6 +275,7 @@ form {
     display: flex;
     box-shadow: 0 3px 15px #d8d8d8;
     margin-top: 30px;
+    transition: transform 0.5s;
 }
 
 .popular-card > img {
@@ -279,6 +285,10 @@ form {
     object-fit: cover;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+}
+
+.popular-card:hover {
+    transform: scale3d(1.1, 1.1, 1);
 }
 
 .description {
@@ -355,6 +365,11 @@ form {
     min-width: 350px;
     max-width: 23%;
     height: 600px;
+    transition: transform 0.5s;
+}
+
+.activity-card:hover {
+    transform: scale3d(1.1, 1.1, 1);
 }
 
 @media (max-width: 1674px) {
