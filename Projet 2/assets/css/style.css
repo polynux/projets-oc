@@ -410,6 +410,20 @@ form {
     .cards {
         width: auto !important;
     }
+
+    #popular {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+    .popular-title {
+        width: 100%;
+    }
+    .popular-card {
+        width: calc(50% - 30px);
+        min-width: 430px;
+        flex-grow: 1;
+    }
 }
 
 @media (max-width: 1284px) {
@@ -422,6 +436,16 @@ form {
     .col-2 {
         flex-direction: column;
         max-width: 100%;
+    }
+
+    .cards {
+        padding: 30px;
+        margin: 0 -20px;
+        border-radius: 0;
+    }
+
+    #city-places.cards {
+        background-color: white;
     }
 }
 
@@ -615,5 +639,14 @@ footer > nav > h3 {
         margin-bottom: 15px;
         margin-left: 0;
         margin-right: 10px;
+    }
+
+    .popular-card {
+        min-width: 300px;
+    }
+
+    .card {
+        min-width: 300px;
+        max-width: 100%;
     }
 }
