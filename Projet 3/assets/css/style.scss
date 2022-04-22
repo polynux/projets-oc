@@ -109,20 +109,18 @@ a {
         border: 0;
         padding: 15px 20px;
         margin-top: 20px;
-        background-image: linear-gradient(to left top, $purple, $rose);
+        background-image: linear-gradient(-20deg, $rose, $purple, $rose);
+        background-size: 150% 300%;
+        background-position-y: top;
         color: white;
         font-weight: 600;
         box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
-        transition: opacity 0.5s ease-in-out;
-
-        &:before {
-            content: "";
-            background: linear-gradient(to left top, $purple, $rose);
-        }
+        transition: all 0.5s ease-in-out;
 
         &:hover {
             cursor: pointer;
-            //https://keithjgrant.com/posts/2017/07/transitioning-gradients/
+            background-position: right bottom;
+            box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
         }
     }
 }
