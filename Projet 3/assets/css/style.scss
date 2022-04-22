@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
+//variables
+$purple: #9356dc;
+$rose: #ff79da;
+$green: #99e2d0;
+
 body {
     margin: 0;
     font-family: "Roboto Regular", sans-serif;
@@ -77,4 +82,33 @@ footer {
 a {
     color: black;
     text-decoration: none;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px;
+    padding-bottom: 50px;
+    background-color: #f6f6f6;
+
+    p {
+        color: #505050;
+    }
+
+    button {
+        border-radius: 25px;
+        border: 0;
+        padding: 15px 20px;
+        margin-top: 20px;
+        background: linear-gradient(to left top, $purple, $rose);
+        color: white;
+        font-weight: 600;
+        box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

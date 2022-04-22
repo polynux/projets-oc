@@ -104,4 +104,42 @@ a {
   color: black;
   text-decoration: none;
 }
+
+.explore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 20px 40px;
+  padding-bottom: 50px;
+  background-color: #f6f6f6;
+}
+
+.explore p {
+  color: #505050;
+}
+
+.explore button {
+  border-radius: 25px;
+  border: 0;
+  padding: 15px 20px;
+  margin-top: 20px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  color: white;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+}
+
+.explore button:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
