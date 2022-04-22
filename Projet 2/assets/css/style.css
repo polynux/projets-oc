@@ -28,7 +28,7 @@ header {
     justify-content: space-between;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header {
         flex-direction: column;
     }
@@ -39,11 +39,7 @@ header {
 
     .link > a {
         width: 100%;
-    }
-
-    .link-active {
-        border-bottom: 5px solid #0065fc;
-        border-top: unset !important;
+        border-bottom: 5px solid #f2f2f2;
     }
 
     .link > a:hover {
@@ -78,14 +74,6 @@ header {
 .link > a:hover {
     color: #0065fc;
     border-top: 3px solid #0065fc;
-}
-
-.link-active {
-    color: #0065fc;
-    border-top: 3px solid #0065fc;
-}
-.link-active > p {
-    color: #0065fc;
 }
 
 main {
@@ -179,12 +167,13 @@ form {
     color: #0065fc;
     background-color: #deebff;
     padding: 15px 16px;
-    border-radius: 25px;
+    border-radius: 30px;
     border: 2px solid #deebff;
     min-width: 20px;
     text-align: center;
     margin: -2px;
     transition: all 0.2s ease-in-out;
+    font-size: 1.2em;
 }
 
 .info {
@@ -237,6 +226,10 @@ form {
 
 .popular-title > h2 {
     margin: 0;
+}
+
+.popular-title > .fa-chart-line {
+    font-size: 1.5em;
 }
 
 .cards > h2 {
@@ -370,7 +363,7 @@ form {
     border-radius: 30px;
     box-shadow: 0 3px 15px #d8d8d8;
     flex-grow: 1;
-    min-width: 350px;
+    min-width: 270px;
     max-width: 23%;
     height: 600px;
     transition: transform 0.5s;
@@ -437,37 +430,33 @@ form {
         flex-direction: column;
         max-width: 100%;
     }
-
-    .cards {
-        padding: 30px;
-        margin: 0 -20px;
-    }
-
-    #city-places.cards {
-        background-color: white;
-    }
 }
 
 @media (max-width: 992px) {
     .activity-card > img {
-        height: 516px;
+        height: 544px;
     }
     .activity-var-1 > img {
-        height: 270px !important;
+        height: 294px !important;
     }
     .activity-var-2 > img {
-        height: 118px !important;
+        height: 144px !important;
     }
     .activity-var-3 > img {
-        height: 192px !important;
+        height: 218px !important;
     }
     .activity-var-4 > img {
-        height: 192px !important;
+        height: 218px !important;
     }
 
     .cards {
         border-radius: 0;
         padding: 20px;
+        margin: 0 -20px;
+    }
+
+    #city-places.cards {
+        background-color: white;
     }
 }
 
@@ -479,34 +468,34 @@ form {
         max-width: 100%;
     }
     .activity-card {
-        height: 350px;
-    }
-    .activity-card > img {
         height: 260px;
     }
+    .activity-card > img {
+        height: 200px;
+    }
     .activity-var-1 {
-        height: 350px !important;
+        height: 260px !important;
     }
     .activity-var-1 > img {
-        height: 260px !important;
+        height: 200px !important;
     }
     .activity-var-2 {
-        height: 350px !important;
+        height: 260px !important;
     }
     .activity-var-2 > img {
-        height: 260px !important;
+        height: 200px !important;
     }
     .activity-var-3 {
-        height: 350px !important;
+        height: 260px !important;
     }
     .activity-var-3 > img {
-        height: 260px !important;
+        height: 200px !important;
     }
     .activity-var-4 {
-        height: 350px !important;
+        height: 260px !important;
     }
     .activity-var-4 > img {
-        height: 260px !important;
+        height: 200px !important;
     }
 }
 
@@ -580,6 +569,14 @@ footer > nav > h3 {
     main {
         margin: 0 20px;
     }
+
+    footer {
+        padding: 30px;
+    }
+
+    footer:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .search-icon {
@@ -600,10 +597,14 @@ footer > nav > h3 {
         width: 100%;
         margin-bottom: 50px;
     }
+    footer > nav:last-child {
+        margin-bottom: 0;
+    }
 
     #search-area {
         overflow: hidden;
         padding-right: 25px;
+        flex-grow: 1;
     }
     .location-icon {
         border-top-left-radius: 1em;
@@ -647,10 +648,31 @@ footer > nav > h3 {
 
     .popular-card {
         min-width: 300px;
+        width: 100%;
     }
 
     .card {
-        min-width: 300px;
+        min-width: 270px;
         max-width: 100%;
+    }
+
+    .activity-card > p {
+        padding-left: 20px;
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+
+    .description {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 460px) {
+    .popular-card > img {
+        max-width: 130px;
+        height: 140px;
+    }
+    .popular-card > .description {
+        padding: 10px 15px;
     }
 }
