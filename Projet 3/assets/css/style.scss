@@ -109,13 +109,20 @@ a {
         border: 0;
         padding: 15px 20px;
         margin-top: 20px;
-        background: linear-gradient(to left top, $purple, $rose);
+        background-image: linear-gradient(to left top, $purple, $rose);
         color: white;
         font-weight: 600;
         box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+        transition: opacity 0.5s ease-in-out;
+
+        &:before {
+            content: "";
+            background: linear-gradient(to left top, $purple, $rose);
+        }
 
         &:hover {
             cursor: pointer;
+            //https://keithjgrant.com/posts/2017/07/transitioning-gradients/
         }
     }
 }
