@@ -265,7 +265,7 @@ form {
 }
 
 .card:hover {
-    transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.05, 1.05, 1);
 }
 
 .popular-card {
@@ -289,7 +289,7 @@ form {
 }
 
 .popular-card:hover {
-    transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.05, 1.05, 1);
 }
 
 .description {
@@ -370,7 +370,7 @@ form {
 }
 
 .activity-card:hover {
-    transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.05, 1.05, 1);
 }
 
 @media (max-width: 1699px) {
@@ -603,7 +603,7 @@ footer > nav > h3 {
 
     #search-area {
         overflow: hidden;
-        padding-right: 25px;
+        padding-right: 35px;
         flex-grow: 1;
     }
     .location-icon {
@@ -618,7 +618,7 @@ footer > nav > h3 {
     .search-icon {
         visibility: visible;
         padding: 1em 1em;
-        margin-left: -15px;
+        margin-left: -20px;
         margin-top: -1px;
         margin-bottom: -1px;
     }
