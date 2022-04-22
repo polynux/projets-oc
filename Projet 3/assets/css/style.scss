@@ -6,6 +6,7 @@ body {
 }
 
 header {
+    position: sticky;
     display: flex;
     justify-content: center;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
@@ -37,8 +38,26 @@ footer {
 }
 
 .location {
+    color: #353535;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     p {
-        display: inline;
+        font-weight: bold;
+        text-align: center;
+    }
+    .fa-location-dot {
+        justify-self: end;
+        right: 10%;
+        left: 90%;
+        position: relative;
+    }
+    div {
+        width: 30%;
+    }
+    .place {
+        flex-grow: 1;
     }
 }
 

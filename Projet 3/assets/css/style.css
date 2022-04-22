@@ -5,6 +5,8 @@ body {
 }
 
 header {
+  position: -webkit-sticky;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,8 +52,40 @@ footer a {
   margin-bottom: 10px;
 }
 
+.location {
+  color: #353535;
+  background-color: #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .location p {
-  display: inline;
+  font-weight: bold;
+  text-align: center;
+}
+
+.location .fa-location-dot {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  right: 10%;
+  left: 90%;
+  position: relative;
+}
+
+.location div {
+  width: 30%;
+}
+
+.location .place {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .card :first-child {
