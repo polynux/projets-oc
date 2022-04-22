@@ -1,4 +1,25 @@
 body {
-  background-color: grey;
+  margin: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+header .logo {
+  width: 40%;
+}
+
+header .logo img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
