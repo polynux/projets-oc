@@ -4,6 +4,10 @@ body {
   font-family: "Roboto Regular", sans-serif;
 }
 
+h2 {
+  font-size: 1.6em;
+}
+
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -117,13 +121,14 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 20px 40px;
+  padding: 20px 35px;
   padding-bottom: 50px;
   background-color: #f6f6f6;
 }
 
 .explore p {
   color: #505050;
+  font-size: 17px;
 }
 
 .explore button {
