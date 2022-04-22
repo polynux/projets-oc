@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Regular", sans-serif;
 }
 
 header {
@@ -24,8 +24,15 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    .logo > img {
-        width: 20%;
+    padding: 20px;
+    .logo {
+        font-family: "Shrikhand", cursive;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+    a {
+        color: white;
+        margin-bottom: 10px;
     }
 }
 
