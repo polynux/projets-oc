@@ -168,6 +168,7 @@ a {
   background-color: #9356dc;
   border-radius: 15px;
   padding: 4px 8px;
+  padding-bottom: 3px;
   margin-right: -15px;
   z-index: 2;
   height: -webkit-fit-content;
@@ -193,5 +194,14 @@ a {
   margin-right: 15px;
   margin-left: 10px;
   color: #505050;
+}
+
+.working .card:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+  cursor: pointer;
+}
+
+.working .card:hover .fa-solid {
+  color: #9356dc;
 }
 /*# sourceMappingURL=style.css.map */
