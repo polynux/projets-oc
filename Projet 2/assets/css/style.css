@@ -12,6 +12,10 @@ taille:
 
 */
 
+/*
+    Font declaration
+*/
+
 * {
     text-decoration: none;
     font-family: "Raleway", sans-serif;
@@ -22,6 +26,18 @@ body {
     font-size: 18px;
     margin: 0;
 }
+
+@media (max-width: 992px) {
+    body {
+        font-size: 1em;
+    }
+}
+
+/* 
+    #############################
+            Header section
+    #############################
+*/
 
 header {
     display: flex;
@@ -76,9 +92,22 @@ header {
     border-top: 3px solid #0065fc;
 }
 
+/* Main margin*/
+
 main {
     margin: 0 50px;
 }
+@media (max-width: 992px) {
+    main {
+        margin: 0 20px;
+    }
+}
+
+/*
+    #############################
+            Search section
+    #############################
+*/
 
 h1 {
     margin-bottom: 10px;
@@ -128,6 +157,16 @@ form {
 #search-btn:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.search-icon {
+    visibility: hidden;
+    background-color: #0065fc;
+    width: fit-content;
+    padding: 0;
+    border-radius: 1em;
+    font-size: 1.2em;
+    color: white;
 }
 
 .filters {
@@ -191,6 +230,59 @@ form {
     margin-left: 0;
     font-size: 0.9em;
 }
+
+@media (max-width: 768px) {
+    #search-area {
+        overflow: hidden;
+        padding-right: 35px;
+        flex-grow: 1;
+    }
+    .location-icon {
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+    }
+    #search-btn {
+        visibility: hidden;
+        width: 0;
+        padding: 0;
+    }
+    .search-icon {
+        visibility: visible;
+        padding: 1em 1em;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+    }
+
+    form {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .filters > p {
+        width: 100%;
+    }
+
+    .filters {
+        margin-bottom: 0;
+    }
+
+    .info {
+        margin-top: 0;
+    }
+
+    .filter {
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
+
+/*
+    #############################
+            Listing section
+    #############################
+*/
 
 #places {
     display: flex;
@@ -321,6 +413,12 @@ form {
     font-weight: bold;
     margin-top: 50px;
 }
+
+/*
+    #############################
+            Activities section
+    #############################
+*/
 
 #activities {
     margin-top: 50px;
@@ -499,6 +597,14 @@ form {
     }
 }
 
+@media (max-width: 768px) {
+    .activity-card > p {
+        padding-left: 20px;
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+}
+
 .activity-var-1 {
     height: 350px;
     width: 100%;
@@ -531,6 +637,12 @@ form {
     height: 215px;
 }
 
+/*
+    #############################
+            Footer section
+    #############################
+*/
+
 footer {
     background-color: #f2f2f2;
     display: flex;
@@ -538,7 +650,6 @@ footer {
     padding: 50px;
     flex-wrap: wrap;
 }
-
 footer > nav {
     display: flex;
     flex-direction: column;
@@ -546,49 +657,25 @@ footer > nav {
     min-width: 200px;
     row-gap: 10px;
 }
-
 footer > nav > * {
     color: black;
     margin: 0;
 }
-
 footer > nav > a {
     margin-bottom: 10px;
 }
-
 footer > nav > h3 {
     margin-bottom: 20px;
 }
 
 @media (max-width: 992px) {
-    body {
-        /* font-size: 26px; */
-        font-size: 1em;
-    }
-
-    main {
-        margin: 0 20px;
-    }
-
     footer {
         padding: 30px;
     }
-
     footer:last-child {
         margin-bottom: 0;
     }
 }
-
-.search-icon {
-    visibility: hidden;
-    background-color: #0065fc;
-    width: fit-content;
-    padding: 0;
-    border-radius: 1em;
-    font-size: 1.2em;
-    color: white;
-}
-
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -600,52 +687,9 @@ footer > nav > h3 {
     footer > nav:last-child {
         margin-bottom: 0;
     }
+}
 
-    #search-area {
-        overflow: hidden;
-        padding-right: 35px;
-        flex-grow: 1;
-    }
-    .location-icon {
-        border-top-left-radius: 1em;
-        border-bottom-left-radius: 1em;
-    }
-    #search-btn {
-        visibility: hidden;
-        width: 0;
-        padding: 0;
-    }
-    .search-icon {
-        visibility: visible;
-        padding: 1em 1em;
-        margin-left: -20px;
-        margin-top: -1px;
-        margin-bottom: -1px;
-    }
-
-    form {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    .filters > p {
-        width: 100%;
-    }
-
-    .filters {
-        margin-bottom: 0;
-    }
-
-    .info {
-        margin-top: 0;
-    }
-
-    .filter {
-        margin-bottom: 15px;
-        margin-left: 0;
-        margin-right: 10px;
-    }
-
+@media (max-width: 768px) {
     .popular-card {
         min-width: 300px;
         width: 100%;
@@ -654,12 +698,6 @@ footer > nav > h3 {
     .card {
         min-width: 270px;
         max-width: 100%;
-    }
-
-    .activity-card > p {
-        padding-left: 20px;
-        font-size: 1.2em;
-        margin-top: 15px;
     }
 
     .description {
