@@ -1,18 +1,4 @@
 /*
-
-color:
-    bleu: #0065FC
-    bleu clair: #DEEBFF
-    gris: #F2F2F2
-
-taille:
-    desktop: 992px
-    tablette: 768px
-    smartphone: en dessous
-
-*/
-
-/*
     Font declaration
 */
 
@@ -44,6 +30,32 @@ header {
     justify-content: space-between;
 }
 
+#logo {
+    width: 100px;
+    padding: 30px 60px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.link > a {
+    min-width: 180px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    margin-top: 3px;
+    color: black;
+}
+.link > a:hover {
+    color: #0065fc;
+    border-top: 3px solid #0065fc;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -62,34 +74,6 @@ header {
         border-bottom: 5px solid #0065fc;
         border-top: unset !important;
     }
-}
-
-#logo {
-    width: 100px;
-    padding: 30px 60px;
-}
-
-.link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.link > a {
-    min-width: 180px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-    margin-top: 3px;
-    color: black;
-}
-
-.link > a:hover {
-    color: #0065fc;
-    border-top: 3px solid #0065fc;
 }
 
 /* Main margin*/
@@ -159,6 +143,9 @@ form {
     cursor: pointer;
 }
 
+/*
+    Mobile search icon
+*/
 .search-icon {
     visibility: hidden;
     background-color: #0065fc;
@@ -169,7 +156,7 @@ form {
     color: white;
 }
 
-.filters {
+.filter-list {
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -188,8 +175,6 @@ form {
 
 .filter:hover {
     cursor: pointer;
-    /* border: 2px solid #0065fc;
-    padding: 3px; */
     background-color: #dfdfdf;
 }
 
@@ -259,12 +244,11 @@ form {
         margin-bottom: 40px;
     }
 
-    .filters > p {
-        width: 100%;
-    }
-
-    .filters {
+    .filter-list {
         margin-bottom: 0;
+    }
+    .filter-list > p {
+        width: 100%;
     }
 
     .info {
@@ -292,13 +276,10 @@ form {
 }
 
 #city-places {
-    /* flex-grow: 60%; */
     width: 60%;
 }
 
 #popular {
-    /* flex-grow: 30%; */
-    /* min-width: 420px; */
     width: 30%;
 }
 
@@ -332,7 +313,6 @@ form {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 50px;
-    /* height: fit-content; */
 }
 
 .card {
@@ -414,6 +394,72 @@ form {
     margin-top: 50px;
 }
 
+@media (max-width: 1699px) {
+    .card {
+        max-width: calc(50% - 30px);
+    }
+}
+@media (max-width: 1600px) {
+    #popular {
+        width: 40%;
+    }
+}
+@media (max-width: 1400px) {
+    #places {
+        flex-direction: column;
+    }
+
+    .cards {
+        width: auto !important;
+    }
+
+    #popular {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+    .popular-title {
+        width: 100%;
+    }
+    .popular-card {
+        width: calc(50% - 30px);
+        min-width: 430px;
+        flex-grow: 1;
+    }
+}
+@media (max-width: 992px) {
+    .cards {
+        border-radius: 0;
+        padding: 20px;
+        margin: 0 -20px;
+    }
+    #city-places.cards {
+        background-color: white;
+    }
+}
+@media (max-width: 768px) {
+    .popular-card {
+        min-width: 300px;
+        width: 100%;
+    }
+    .card {
+        min-width: 270px;
+        max-width: 100%;
+    }
+    .description {
+        padding: 15px;
+    }
+}
+@media (max-width: 460px) {
+    .popular-card > img {
+        max-width: 130px;
+        height: 140px;
+    }
+    .popular-card > .description {
+        padding: 10px 15px;
+    }
+}
+
 /*
     #############################
             Activities section
@@ -425,12 +471,15 @@ form {
     margin-bottom: 50px;
 }
 
-.activity-cards {
+.activity-card-list {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
 }
 
+/*
+    Column for special height
+*/
 .column {
     display: flex;
     flex-direction: column;
@@ -438,7 +487,6 @@ form {
     flex-grow: 1;
     max-width: 33%;
 }
-
 .column > a {
     max-width: 100%;
 }
@@ -471,10 +519,28 @@ form {
     transform: scale3d(1.05, 1.05, 1);
 }
 
-@media (max-width: 1699px) {
-    .card {
-        max-width: calc(50% - 30px);
-    }
+.var-1 {
+    height: 350px;
+    width: 100%;
+}
+.var-1 > img {
+    height: 290px;
+}
+
+.var-2 {
+    height: 200px;
+    width: 100%;
+}
+.var-2 > img {
+    height: 139px;
+}
+
+.var-3 {
+    height: 275px;
+    width: 100%;
+}
+.var-3 > img {
+    height: 215px;
 }
 
 @media (max-width: 1674px) {
@@ -484,36 +550,6 @@ form {
     .col-2 {
         flex-direction: row;
         max-width: 100%;
-    }
-}
-
-@media (max-width: 1600px) {
-    #popular {
-        width: 40%;
-    }
-}
-
-@media (max-width: 1400px) {
-    #places {
-        flex-direction: column;
-    }
-
-    .cards {
-        width: auto !important;
-    }
-
-    #popular {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 30px;
-    }
-    .popular-title {
-        width: 100%;
-    }
-    .popular-card {
-        width: calc(50% - 30px);
-        min-width: 430px;
-        flex-grow: 1;
     }
 }
 
@@ -534,35 +570,22 @@ form {
     .activity-card > img {
         height: 544px;
     }
-    .activity-var-1 > img {
+    .var-1 > img {
         height: 294px !important;
     }
-    .activity-var-2 > img {
+    .var-2 > img {
         height: 144px !important;
     }
-    .activity-var-3 > img {
+    .var-3 > img {
         height: 218px !important;
-    }
-    .activity-var-4 > img {
-        height: 218px !important;
-    }
-
-    .cards {
-        border-radius: 0;
-        padding: 20px;
-        margin: 0 -20px;
-    }
-
-    #city-places.cards {
-        background-color: white;
     }
 }
 
 @media (max-width: 869px) {
-    .activity-cards {
+    .activity-card-list {
         flex-direction: column;
     }
-    .activity-cards > * {
+    .activity-card-list > * {
         max-width: 100%;
     }
     .activity-card {
@@ -571,70 +594,13 @@ form {
     .activity-card > img {
         height: 200px;
     }
-    .activity-var-1 {
-        height: 260px !important;
-    }
-    .activity-var-1 > img {
-        height: 200px !important;
-    }
-    .activity-var-2 {
-        height: 260px !important;
-    }
-    .activity-var-2 > img {
-        height: 200px !important;
-    }
-    .activity-var-3 {
-        height: 260px !important;
-    }
-    .activity-var-3 > img {
-        height: 200px !important;
-    }
-    .activity-var-4 {
-        height: 260px !important;
-    }
-    .activity-var-4 > img {
-        height: 200px !important;
-    }
 }
-
 @media (max-width: 768px) {
     .activity-card > p {
         padding-left: 20px;
         font-size: 1.2em;
         margin-top: 15px;
     }
-}
-
-.activity-var-1 {
-    height: 350px;
-    width: 100%;
-}
-.activity-var-1 > img {
-    height: 290px;
-}
-
-.activity-var-2 {
-    height: 200px;
-    width: 100%;
-}
-.activity-var-2 > img {
-    height: 139px;
-}
-
-.activity-var-3 {
-    height: 275px;
-    width: 100%;
-}
-.activity-var-3 > img {
-    height: 215px;
-}
-
-.activity-var-4 {
-    height: 275px;
-    width: 100%;
-}
-.activity-var-4 > img {
-    height: 215px;
 }
 
 /*
@@ -686,31 +652,5 @@ footer > nav > h3 {
     }
     footer > nav:last-child {
         margin-bottom: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .popular-card {
-        min-width: 300px;
-        width: 100%;
-    }
-
-    .card {
-        min-width: 270px;
-        max-width: 100%;
-    }
-
-    .description {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 460px) {
-    .popular-card > img {
-        max-width: 130px;
-        height: 140px;
-    }
-    .popular-card > .description {
-        padding: 10px 15px;
     }
 }
