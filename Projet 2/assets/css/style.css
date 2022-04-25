@@ -571,13 +571,13 @@ form {
         height: 544px;
     }
     .var-1 > img {
-        height: 294px !important;
+        height: 294px;
     }
     .var-2 > img {
-        height: 144px !important;
+        height: 144px;
     }
     .var-3 > img {
-        height: 218px !important;
+        height: 218px;
     }
 }
 
