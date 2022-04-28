@@ -50,6 +50,7 @@ header {
     box-sizing: content-box;
     margin-top: 3px;
     color: black;
+    border-top: 3px solid transparent;
 }
 .link > a:hover {
     color: #0065fc;
