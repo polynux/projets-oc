@@ -161,6 +161,7 @@ a {
 .restaurant-list {
     background-color: $gray;
     padding: 20px;
+    padding-bottom: 40px;
 
     .container {
         border-radius: 20px;
@@ -178,6 +179,7 @@ a {
 
         .description {
             margin: 15px;
+            margin-bottom: 0;
             display: flex;
             .text {
                 flex-grow: 1;
@@ -196,14 +198,20 @@ a {
 
         .new {
             position: relative;
-            left: 72%;
-            top: -280px;
-            background-color: #99e2d0;
-            color: #119071;
-            border: 1px solid #119071;
-            border-radius: 2px;
-            padding: 5px 10px;
-            width: fit-content;
+            top: -240px;
+            margin-top: -30px;
+            display: flex;
+            justify-content: end;
+            padding-right: 10px;
+            p {
+                background-color: #99e2d0;
+                color: #119071;
+                border-radius: 2px;
+                padding: 7px 15px;
+                margin: 0;
+                font-weight: bold;
+                width: fit-content;
+            }
         }
     }
 }

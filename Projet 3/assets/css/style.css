@@ -202,6 +202,7 @@ a {
 .restaurant-list {
   background-color: #f6f6f6;
   padding: 20px;
+  padding-bottom: 40px;
 }
 
 .restaurant-list .container {
@@ -223,6 +224,7 @@ a {
 
 .restaurant-list .container .description {
   margin: 15px;
+  margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,13 +251,24 @@ a {
 
 .restaurant-list .container .new {
   position: relative;
-  left: 72%;
-  top: -280px;
+  top: -240px;
+  margin-top: -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 10px;
+}
+
+.restaurant-list .container .new p {
   background-color: #99e2d0;
   color: #119071;
-  border: 1px solid #119071;
   border-radius: 2px;
-  padding: 5px 10px;
+  padding: 7px 15px;
+  margin: 0;
+  font-weight: bold;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
