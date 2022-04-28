@@ -97,6 +97,31 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  border-radius: 25px;
+  border: 0;
+  padding: 15px 20px;
+  margin-top: 20px;
+  background-image: linear-gradient(-20deg, #ff79da, #9356dc, #ff79da);
+  background-size: 150% 300%;
+  background-position-y: top;
+  color: white;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  min-width: 150px;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-position: right bottom;
+  -webkit-box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
+          box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
+}
+
 .explore {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,29 +142,6 @@ a {
 .explore p {
   color: #505050;
   font-size: 17px;
-}
-
-.explore button {
-  border-radius: 25px;
-  border: 0;
-  padding: 15px 20px;
-  margin-top: 20px;
-  background-image: linear-gradient(-20deg, #ff79da, #9356dc, #ff79da);
-  background-size: 150% 300%;
-  background-position-y: top;
-  color: white;
-  font-weight: 600;
-  -webkit-box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
-          box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.explore button:hover {
-  cursor: pointer;
-  background-position: right bottom;
-  -webkit-box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
-          box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
 }
 
 .working {
@@ -199,6 +201,16 @@ a {
   color: #9356dc;
 }
 
+.heart {
+  width: 2em;
+  height: 2em;
+  margin-right: 10px;
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
 .restaurant-list {
   background-color: #f6f6f6;
   padding: 20px;
@@ -244,11 +256,6 @@ a {
   margin-top: 5px;
 }
 
-.restaurant-list .container .description .heart {
-  width: 2em;
-  height: 2em;
-}
-
 .restaurant-list .container .new {
   position: relative;
   top: -240px;
@@ -272,5 +279,115 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.background {
+  width: 100%;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.menu-title {
+  background-color: #f6f6f6;
+  padding: 20px;
+  padding-bottom: 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-title h1 {
+  font-family: "Shrikhand", cursive;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 20px;
+  padding-top: 1px;
+}
+
+.menu .sub-menu {
+  margin-bottom: 50px;
+}
+
+.menu .sub-menu h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.1em;
+}
+
+.menu .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
+}
+
+.menu .card .description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.menu .card .description h3 {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu .card .description p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu .card .price {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.menu .card .selector {
+  background-color: #99e2d0;
+  color: white;
+  padding: 22px 18px;
+  margin-right: -10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 1.5em;
+}
+
+.menu .checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .checkout .btn {
+  margin: 40px 0;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
