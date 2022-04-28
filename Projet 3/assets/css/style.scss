@@ -65,22 +65,20 @@ footer {
     background-color: #eaeaea;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+
     p {
         font-weight: bold;
         text-align: center;
+        width: fit-content;
     }
-    .fa-location-dot {
-        justify-self: end;
-        right: 10%;
-        left: 90%;
-        position: relative;
+
+    .fa-solid {
+        margin-right: 20px;
     }
-    div {
-        width: 30%;
-    }
+
     .place {
-        flex-grow: 1;
+        margin-right: 20px;
     }
 }
 
@@ -172,6 +170,19 @@ a {
             .fa-solid {
                 color: $purple;
             }
+        }
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+
+        h2 {
+            width: 100%;
+        }
+        .list {
+            flex-grow: 1;
         }
     }
 }

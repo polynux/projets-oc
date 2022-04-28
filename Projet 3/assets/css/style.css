@@ -82,31 +82,25 @@ footer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .location p {
   font-weight: bold;
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.location .fa-location-dot {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  right: 10%;
-  left: 90%;
-  position: relative;
-}
-
-.location div {
-  width: 30%;
+.location .fa-solid {
+  margin-right: 20px;
 }
 
 .location .place {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  margin-right: 20px;
 }
 
 a {
@@ -222,6 +216,26 @@ a {
 
 .working .card:hover .fa-solid {
   color: #9356dc;
+}
+
+@media (min-width: 992px) {
+  .working {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .working h2 {
+    width: 100%;
+  }
+  .working .list {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .heart {
