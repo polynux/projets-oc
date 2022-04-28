@@ -270,18 +270,24 @@ a {
         border-radius: 20px;
         padding: 10px;
         box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
+        overflow: hidden;
 
         .description {
             flex-grow: 1;
+            width: calc(100% - 130px);
 
             h3 {
                 margin: 0;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                white-space: nowrap;
             }
             p {
                 margin-top: 5px;
                 margin-bottom: 5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
         }
 
@@ -297,8 +303,6 @@ a {
             margin-right: -10px;
             margin-top: -10px;
             margin-bottom: -10px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
             font-size: 1.5em;
         }
     }
