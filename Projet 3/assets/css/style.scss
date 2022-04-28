@@ -156,15 +156,18 @@ a {
         flex-grow: 1;
         color: #1d1d1d;
         font-weight: bold;
+        transition: all 0.4s;
 
         .fa-solid {
             margin-right: 15px;
             margin-left: 10px;
             color: #505050;
+            transition: all 0.4s;
         }
 
         &:hover {
             background-color: rgba($purple, 0.15);
+            box-shadow: 8px 7px 12px -4px rgba(0, 0, 0, 0.24);
             cursor: pointer;
             .fa-solid {
                 color: $purple;
@@ -183,7 +186,7 @@ a {
     }
 }
 
-.restaurant-list {
+#restaurant-list {
     background-color: $gray;
     padding: 20px;
     padding-bottom: 40px;
@@ -193,6 +196,12 @@ a {
         background-color: white;
         margin-bottom: 20px;
         box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
+        transition: all 0.4s;
+
+        &:hover {
+            transform: scale(1.03, 1.03);
+            box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.24);
+        }
 
         img:not(.heart) {
             object-fit: cover;

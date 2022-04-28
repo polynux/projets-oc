@@ -201,16 +201,22 @@ a {
           flex-grow: 1;
   color: #1d1d1d;
   font-weight: bold;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .working .card .fa-solid {
   margin-right: 15px;
   margin-left: 10px;
   color: #505050;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .working .card:hover {
   background-color: rgba(147, 86, 220, 0.15);
+  -webkit-box-shadow: 8px 7px 12px -4px rgba(0, 0, 0, 0.24);
+          box-shadow: 8px 7px 12px -4px rgba(0, 0, 0, 0.24);
   cursor: pointer;
 }
 
@@ -228,21 +234,30 @@ a {
   cursor: pointer;
 }
 
-.restaurant-list {
+#restaurant-list {
   background-color: #f6f6f6;
   padding: 20px;
   padding-bottom: 40px;
 }
 
-.restaurant-list .container {
+#restaurant-list .container {
   border-radius: 20px;
   background-color: white;
   margin-bottom: 20px;
   -webkit-box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
           box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.restaurant-list .container img:not(.heart) {
+#restaurant-list .container:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+  -webkit-box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.24);
+          box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.24);
+}
+
+#restaurant-list .container img:not(.heart) {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -251,7 +266,7 @@ a {
   border-top-right-radius: 20px;
 }
 
-.restaurant-list .container .description {
+#restaurant-list .container .description {
   margin: 15px;
   margin-bottom: 0;
   display: -webkit-box;
@@ -259,21 +274,21 @@ a {
   display: flex;
 }
 
-.restaurant-list .container .description .text {
+#restaurant-list .container .description .text {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.restaurant-list .container .description .text h3 {
+#restaurant-list .container .description .text h3 {
   margin: 0;
 }
 
-.restaurant-list .container .description .text p {
+#restaurant-list .container .description .text p {
   margin-top: 5px;
 }
 
-.restaurant-list .container .new {
+#restaurant-list .container .new {
   position: relative;
   top: -240px;
   margin-top: -30px;
@@ -286,7 +301,7 @@ a {
   padding-right: 10px;
 }
 
-.restaurant-list .container .new p {
+#restaurant-list .container .new p {
   background-color: #99e2d0;
   color: #119071;
   border-radius: 2px;
