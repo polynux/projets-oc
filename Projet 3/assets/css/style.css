@@ -31,6 +31,23 @@ header .logo img {
   width: 100%;
 }
 
+header:not(.home) {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header:not(.home) .back {
+  font-size: 1.5em;
+  color: #1d1d1d;
+  margin-left: 30px;
+  margin-right: -50px;
+  margin-top: -5px;
+}
+
 footer {
   background-color: #353535;
   display: -webkit-box;
@@ -349,6 +366,7 @@ a {
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: calc(100% - 130px);
+  margin-right: 15px;
 }
 
 .menu .card .description h3 {
