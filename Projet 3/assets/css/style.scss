@@ -11,6 +11,23 @@ body {
     font-family: "Roboto Regular", sans-serif;
 }
 
+.loading-spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: white;
+    z-index: -100;
+    opacity: 0;
+    animation: loading-spinner-init 2s, loading-spinner 1s ease-in-out 2s;
+
+    img {
+        position: fixed;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+    }
+}
+
 h2 {
     font-size: 1.6em;
 }
@@ -331,6 +348,7 @@ a {
         box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
         overflow: hidden;
         transition: box-shadow 0.4s;
+        animation: loading-menu 1s ease-in-out 0.5s;
 
         .description {
             flex-grow: 1;
@@ -398,5 +416,29 @@ a {
     }
     to {
         transform: rotate(720deg);
+    }
+}
+
+@keyframes laoding-menu {
+}
+
+@keyframes loading-spinner-init {
+    from {
+        opacity: 1;
+        z-index: 100;
+    }
+    to {
+        opacity: 1;
+        z-index: 100;
+    }
+}
+@keyframes loading-spinner {
+    from {
+        opacity: 1;
+        z-index: 100;
+    }
+    to {
+        opacity: 0;
+        z-index: 100;
     }
 }

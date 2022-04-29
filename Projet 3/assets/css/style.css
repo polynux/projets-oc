@@ -4,6 +4,24 @@ body {
   font-family: "Roboto Regular", sans-serif;
 }
 
+.loading-spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: white;
+  z-index: -100;
+  opacity: 0;
+  -webkit-animation: loading-spinner-init 2s, loading-spinner 1s ease-in-out 2s;
+          animation: loading-spinner-init 2s, loading-spinner 1s ease-in-out 2s;
+}
+
+.loading-spinner img {
+  position: fixed;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+}
+
 h2 {
   font-size: 1.6em;
 }
@@ -423,6 +441,8 @@ a {
   transition: -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s;
   transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+  -webkit-animation: loading-menu 1s ease-in-out 0.5s;
+          animation: loading-menu 1s ease-in-out 0.5s;
 }
 
 .menu .card .description {
@@ -512,6 +532,50 @@ a {
   to {
     -webkit-transform: rotate(720deg);
             transform: rotate(720deg);
+  }
+}
+
+@-webkit-keyframes laoding-menu {}
+
+@keyframes laoding-menu {}@-webkit-keyframes loading-spinner-init {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 1;
+    z-index: 100;
+  }
+}@keyframes loading-spinner-init {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+@-webkit-keyframes loading-spinner {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 0;
+    z-index: 100;
+  }
+}
+
+@keyframes loading-spinner {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 0;
+    z-index: 100;
   }
 }
 /*# sourceMappingURL=style.css.map */
