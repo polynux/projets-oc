@@ -442,3 +442,49 @@ a {
         z-index: 100;
     }
 }
+
+@keyframes square-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-heart {
+    font-size: 2em;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+
+    .wave {
+        width: 32px;
+        height: 32px;
+        clip-path: path(
+            "M 0.07102946,7.8105195 V 7.5276557 c 0,-3.4089961 2.55118004,-6.3166408 6.02951114,-6.87651599 C 8.3578197,0.28097829 10.746394,1.0056948 12.392644,2.5980228 l 0.605981,0.58426 0.560532,-0.58426 c 1.691696,-1.592328 4.034824,-2.31704451 6.337551,-1.94688309 3.479341,0.55987519 6.029513,3.46751989 6.029513,6.87651599 v 0.2828638 c 0,2.0239397 -0.868576,3.9600935 -2.403726,5.3402735 l -9.125064,8.227434 c -0.378739,0.341387 -0.878674,0.531587 -1.398806,0.531587 -0.520134,0 -1.020069,-0.1902 -1.398807,-0.531587 L 2.474249,13.150793 C 0.94111719,11.770613 0.07104461,9.8344592 0.07104461,7.8105195 Z"
+        );
+        transform: translate(3px, -27px);
+        background: linear-gradient($purple, $rose);
+        overflow: hidden;
+
+        .square {
+            border-radius: 38%;
+            background-color: $gray;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            left: -40%;
+            top: -60%;
+            animation: square-rotation 2s linear infinite;
+            transition: all 4s ease;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        .square {
+            top: -200%;
+        }
+    }
+}
