@@ -310,6 +310,12 @@ a {
             text-transform: uppercase;
             font-weight: 200;
             font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .title-underline {
+            height: 3px;
+            background-color: $green;
+            width: 3em;
         }
 
         margin-bottom: 50px;
