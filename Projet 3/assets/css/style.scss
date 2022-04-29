@@ -330,6 +330,7 @@ a {
         padding: 10px;
         box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
         overflow: hidden;
+        transition: box-shadow 0.4s;
 
         .description {
             flex-grow: 1;
@@ -353,17 +354,34 @@ a {
 
         .price {
             font-weight: bold;
-            margin-right: 20px;
         }
 
         .selector {
             background-color: $green;
             color: white;
             padding: 22px 18px;
-            margin-right: -10px;
-            margin-top: -10px;
-            margin-bottom: -10px;
+            margin: -10px;
+            margin-left: 20px;
+            margin-right: -70px;
             font-size: 1.5em;
+            transition: margin-right 0.5s;
+
+            .fa-solid.fa-circle-check {
+                transition: transform 0.5s;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
+
+            .selector {
+                margin-right: -10px;
+
+                .fa-solid.fa-circle-check {
+                    transform: rotate(720deg);
+                }
+            }
         }
     }
 
