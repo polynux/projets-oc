@@ -365,10 +365,6 @@ a {
             margin-right: -70px;
             font-size: 1.5em;
             transition: margin-right 0.5s;
-
-            .fa-solid.fa-circle-check {
-                transition: transform 0.5s;
-            }
         }
 
         &:hover {
@@ -379,7 +375,7 @@ a {
                 margin-right: -10px;
 
                 .fa-solid.fa-circle-check {
-                    transform: rotate(720deg);
+                    animation: check-rotation 0.5s;
                 }
             }
         }
@@ -393,5 +389,14 @@ a {
             margin: 40px 0;
             margin-top: 10px;
         }
+    }
+}
+
+@keyframes check-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
     }
 }
