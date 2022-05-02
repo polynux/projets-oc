@@ -19,7 +19,7 @@ body {
     background-color: white;
     z-index: -100;
     opacity: 0;
-    animation: loading-spinner-init 2s, loading-spinner 1s ease-in-out 2s;
+    animation: loading-spinner-init 1s, loading-spinner 1s ease-in-out 1s;
 
     img {
         position: fixed;
@@ -467,6 +467,7 @@ a {
         transform: translate(3px, -27px);
         background: linear-gradient($purple, $rose);
         overflow: hidden;
+        opacity: 0;
 
         .square {
             border-radius: 38%;
@@ -474,10 +475,10 @@ a {
             width: 60px;
             height: 60px;
             position: relative;
-            left: -40%;
-            top: -60%;
+            left: -15px;
+            top: -30px;
             animation: square-rotation 2s linear infinite;
-            transition: all 4s ease;
+            transition: top 2s ease;
         }
     }
 
@@ -485,6 +486,9 @@ a {
         cursor: pointer;
         .square {
             top: -200%;
+        }
+        .wave {
+            opacity: 1;
         }
     }
 }
