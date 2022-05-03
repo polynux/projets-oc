@@ -205,12 +205,35 @@ a {
 }
 
 .heart {
-    width: 2em;
-    height: 2em;
-    margin-right: 10px;
+    font-size: 2em;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    clip-path: path(
+        "M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z"
+    );
+    overflow: hidden;
+
+    .wave {
+        border-radius: 38%;
+        background: linear-gradient(-20deg, $rose, $purple);
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: -15px;
+        top: 0px;
+        transition: all 2s ease;
+    }
 
     &:hover {
         cursor: pointer;
+        .wave {
+            top: -32px;
+            animation: square-rotation 1.5s linear;
+            width: 1em;
+            height: 1em;
+            left: 0;
+        }
     }
 }
 
@@ -231,7 +254,7 @@ a {
             box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.24);
         }
 
-        img:not(.heart) {
+        img {
             object-fit: cover;
             width: 100%;
             height: 200px;
@@ -449,46 +472,5 @@ a {
     }
     to {
         transform: rotate(360deg);
-    }
-}
-
-.fa-heart {
-    font-size: 2em;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-
-    .wave {
-        width: 32px;
-        height: 32px;
-        clip-path: path(
-            "M 0.07102946,7.8105195 V 7.5276557 c 0,-3.4089961 2.55118004,-6.3166408 6.02951114,-6.87651599 C 8.3578197,0.28097829 10.746394,1.0056948 12.392644,2.5980228 l 0.605981,0.58426 0.560532,-0.58426 c 1.691696,-1.592328 4.034824,-2.31704451 6.337551,-1.94688309 3.479341,0.55987519 6.029513,3.46751989 6.029513,6.87651599 v 0.2828638 c 0,2.0239397 -0.868576,3.9600935 -2.403726,5.3402735 l -9.125064,8.227434 c -0.378739,0.341387 -0.878674,0.531587 -1.398806,0.531587 -0.520134,0 -1.020069,-0.1902 -1.398807,-0.531587 L 2.474249,13.150793 C 0.94111719,11.770613 0.07104461,9.8344592 0.07104461,7.8105195 Z"
-        );
-        transform: translate(3px, -27px);
-        background: linear-gradient($purple, $rose);
-        overflow: hidden;
-        opacity: 0;
-
-        .square {
-            border-radius: 38%;
-            background-color: $gray;
-            width: 60px;
-            height: 60px;
-            position: relative;
-            left: -15px;
-            top: -30px;
-            animation: square-rotation 2s linear infinite;
-            transition: top 2s ease;
-        }
-    }
-
-    &:hover {
-        cursor: pointer;
-        .square {
-            top: -200%;
-        }
-        .wave {
-            opacity: 1;
-        }
     }
 }
