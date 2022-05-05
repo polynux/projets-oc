@@ -453,6 +453,7 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  color: #1d1d1d;
 }
 
 .menu {
@@ -516,6 +517,11 @@ a {
 .menu .card:nth-child(5) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+}
+
+.menu .card:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .menu .card .description {

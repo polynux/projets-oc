@@ -361,6 +361,7 @@ a {
     h1 {
         font-family: "Shrikhand", cursive;
         flex-grow: 1;
+        color: #1d1d1d;
     }
 }
 .menu {
@@ -398,7 +399,7 @@ a {
         animation-fill-mode: forwards;
         opacity: 0;
 
-        @for $i from 2 through 4 {
+        @for $i from 2 through 5 {
             &:nth-child(#{$i + 1}) {
                 animation-delay: 0.2s * $i;
             }
