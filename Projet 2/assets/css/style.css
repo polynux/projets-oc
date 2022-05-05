@@ -400,39 +400,6 @@ form {
     margin-top: 50px;
 }
 
-/* @media (max-width: 1699px) {
-    .card {
-        max-width: calc(50% - 30px);
-    }
-}
-@media (max-width: 1600px) {
-    #popular {
-        width: 40%;
-    }
-}
-@media (max-width: 1400px) {
-    #places {
-        flex-direction: column;
-    }
-
-    .cards {
-        width: auto !important;
-    }
-
-    #popular {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 30px;
-    }
-    .popular-title {
-        width: 100%;
-    }
-    .popular-card {
-        width: calc(50% - 30px);
-        min-width: 430px;
-        flex-grow: 1;
-    }
-} */
 @media (max-width: 992px) {
     .cards {
         border-radius: 0;
