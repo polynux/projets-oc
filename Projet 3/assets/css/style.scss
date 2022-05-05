@@ -228,11 +228,11 @@ a {
     &:hover {
         cursor: pointer;
         .wave {
-            top: -32px;
+            top: -34px;
             animation: square-rotation 1.5s linear;
-            width: 1em;
-            height: 1em;
-            left: 0;
+            width: 1.1em;
+            height: 1.1em;
+            left: -1.5px;
         }
     }
 }
@@ -250,8 +250,7 @@ a {
         transition: all 0.4s;
 
         &:hover {
-            transform: scale(1.03, 1.03);
-            box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.24);
+            box-shadow: 6px 5px 14px 6px rgba(0, 0, 0, 0.4);
         }
 
         img {
