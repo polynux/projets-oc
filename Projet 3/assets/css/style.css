@@ -27,8 +27,10 @@ h2 {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,7 +399,8 @@ a {
   height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: relative;
+  position: fixed;
+  top: 40px;
   z-index: -1;
 }
 
@@ -407,7 +410,7 @@ a {
   padding-bottom: 0;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  margin-top: -60px;
+  margin-top: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,8 +467,26 @@ a {
   transition: -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s;
   transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
-  -webkit-animation: loading-menu 1s ease-in-out 0.5s;
-          animation: loading-menu 1s ease-in-out 0.5s;
+  -webkit-animation: loading-menu 1s ease-in-out;
+          animation: loading-menu 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.menu .card:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.menu .card:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.menu .card:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .menu .card .description {
@@ -558,9 +579,29 @@ a {
   }
 }
 
-@-webkit-keyframes laoding-menu {}
+@-webkit-keyframes loading-menu {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-@keyframes laoding-menu {}@-webkit-keyframes loading-spinner-init {
+@keyframes loading-menu {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loading-spinner-init {
   from {
     opacity: 1;
     z-index: 100;
@@ -569,7 +610,9 @@ a {
     opacity: 1;
     z-index: 100;
   }
-}@keyframes loading-spinner-init {
+}
+
+@keyframes loading-spinner-init {
   from {
     opacity: 1;
     z-index: 100;
