@@ -272,16 +272,19 @@ form {
 #places {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
     gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #city-places {
-    width: 60%;
+    flex: 1 0 60%;
+    min-width: 800px;
 }
 
 #popular {
-    width: 30%;
+    flex: 1 0 25%;
+    min-width: 520px;
 }
 
 .card-list {
@@ -290,6 +293,7 @@ form {
     gap: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
+    justify-content: space-evenly;
 }
 
 .popular-title {
@@ -314,6 +318,7 @@ form {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 50px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -322,10 +327,10 @@ form {
     padding: 5px;
     display: flex;
     box-shadow: 0 3px 15px #d8d8d8;
-    max-width: 30%;
-    width: 100%;
+    min-width: 320px;
     flex-direction: column;
     transition: transform 0.5s;
+    flex: 1 0 30%;
 }
 
 .card > img {
@@ -395,7 +400,7 @@ form {
     margin-top: 50px;
 }
 
-@media (max-width: 1699px) {
+/* @media (max-width: 1699px) {
     .card {
         max-width: calc(50% - 30px);
     }
@@ -427,7 +432,7 @@ form {
         min-width: 430px;
         flex-grow: 1;
     }
-}
+} */
 @media (max-width: 992px) {
     .cards {
         border-radius: 0;
@@ -436,6 +441,17 @@ form {
     }
     #city-places.cards {
         background-color: white;
+        flex-direction: column;
+    }
+
+    #popular {
+        width: 100%;
+        padding: 30px;
+    }
+    #city-places {
+        width: 100%;
+        padding: 30px;
+        min-width: unset;
     }
 }
 @media (max-width: 768px) {
@@ -444,20 +460,14 @@ form {
         width: 100%;
     }
     .card {
-        min-width: 270px;
-        max-width: 100%;
+        flex-basis: 100%;
+        min-width: unset;
     }
     .description {
         padding: 15px;
     }
-}
-@media (max-width: 460px) {
-    .popular-card > img {
-        max-width: 130px;
-        height: 140px;
-    }
-    .popular-card > .description {
-        padding: 10px 15px;
+    #popular {
+        min-width: unset;
     }
 }
 
