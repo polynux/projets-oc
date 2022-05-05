@@ -4,6 +4,15 @@ body {
   font-family: "Roboto Regular", sans-serif;
 }
 
+@media (min-width: 992px) {
+  section:not(.location, .explore) {
+    max-width: 1300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .loading-spinner {
   position: fixed;
   width: 100%;
@@ -51,6 +60,12 @@ header .logo img {
   width: 100%;
 }
 
+@media (min-width: 1024px) {
+  header .logo {
+    width: 200px;
+  }
+}
+
 header:not(.home) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -94,6 +109,18 @@ footer .logo {
 footer a {
   color: white;
   margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .location {
@@ -382,7 +409,6 @@ a {
         flex-wrap: wrap;
     -webkit-column-gap: 20px;
             column-gap: 20px;
-    max-width: 1300px;
     position: relative;
     margin: 20px;
     margin-left: auto;
