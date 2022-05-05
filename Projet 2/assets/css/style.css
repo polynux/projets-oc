@@ -272,16 +272,19 @@ form {
 #places {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
     gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #city-places {
-    width: 60%;
+    flex: 1 0 60%;
+    min-width: 800px;
 }
 
 #popular {
-    width: 30%;
+    flex: 1 0 25%;
+    min-width: 520px;
 }
 
 .card-list {
@@ -290,6 +293,7 @@ form {
     gap: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
+    justify-content: space-evenly;
 }
 
 .popular-title {
@@ -314,6 +318,7 @@ form {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 50px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -322,10 +327,10 @@ form {
     padding: 5px;
     display: flex;
     box-shadow: 0 3px 15px #d8d8d8;
-    max-width: 30%;
-    width: 100%;
+    min-width: 320px;
     flex-direction: column;
     transition: transform 0.5s;
+    flex: 1 0 30%;
 }
 
 .card > img {
@@ -395,39 +400,6 @@ form {
     margin-top: 50px;
 }
 
-@media (max-width: 1699px) {
-    .card {
-        max-width: calc(50% - 30px);
-    }
-}
-@media (max-width: 1600px) {
-    #popular {
-        width: 40%;
-    }
-}
-@media (max-width: 1400px) {
-    #places {
-        flex-direction: column;
-    }
-
-    .cards {
-        width: auto !important;
-    }
-
-    #popular {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 30px;
-    }
-    .popular-title {
-        width: 100%;
-    }
-    .popular-card {
-        width: calc(50% - 30px);
-        min-width: 430px;
-        flex-grow: 1;
-    }
-}
 @media (max-width: 992px) {
     .cards {
         border-radius: 0;
@@ -436,28 +408,43 @@ form {
     }
     #city-places.cards {
         background-color: white;
+        flex-direction: column;
+    }
+
+    #popular {
+        width: 100%;
+        padding: 30px;
+    }
+    #city-places {
+        width: 100%;
+        padding: 30px;
+        min-width: unset;
     }
 }
 @media (max-width: 768px) {
     .popular-card {
-        min-width: 300px;
+        min-width: unset;
         width: 100%;
     }
+    .popular-card > img {
+        max-width: 140px;
+        max-height: 170px;
+    }
     .card {
-        min-width: 270px;
-        max-width: 100%;
+        flex-basis: 100%;
+        min-width: unset;
+    }
+    .cards {
+        width: auto !important;
     }
     .description {
         padding: 15px;
     }
-}
-@media (max-width: 460px) {
-    .popular-card > img {
-        max-width: 130px;
-        height: 140px;
+    #popular {
+        min-width: unset;
     }
-    .popular-card > .description {
-        padding: 10px 15px;
+    #places {
+        flex-direction: column;
     }
 }
 
@@ -483,10 +470,10 @@ form {
 */
 .column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 50px;
-    flex-grow: 1;
-    max-width: 33%;
+    flex: 1 0 20%;
 }
 .column > a {
     max-width: 100%;
@@ -509,11 +496,10 @@ form {
 .activity-card {
     border-radius: 30px;
     box-shadow: 0 3px 15px #d8d8d8;
-    flex-grow: 1;
-    min-width: 270px;
-    max-width: 23%;
+    min-width: 300px;
     height: 600px;
     transition: transform 0.5s;
+    flex: 1 0 20%;
 }
 
 .activity-card:hover {
@@ -544,29 +530,6 @@ form {
     height: 215px;
 }
 
-@media (max-width: 1674px) {
-    .activity-card {
-        max-width: 31%;
-    }
-    .col-2 {
-        flex-direction: row;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 1284px) {
-    .activity-card {
-        max-width: 48%;
-    }
-    .col-1 {
-        max-width: 48%;
-    }
-    .col-2 {
-        flex-direction: column;
-        max-width: 100%;
-    }
-}
-
 @media (max-width: 992px) {
     .activity-card > img {
         height: 544px;
@@ -580,27 +543,28 @@ form {
     .var-3 > img {
         height: 218px;
     }
+    .activity-card,
+    .column {
+        flex: 1 0 40%;
+    }
 }
 
-@media (max-width: 869px) {
-    .activity-card-list {
-        flex-direction: column;
-    }
-    .activity-card-list > * {
-        max-width: 100%;
-    }
-    .activity-card {
-        height: 260px;
-    }
-    .activity-card > img {
-        height: 200px;
-    }
-}
 @media (max-width: 768px) {
     .activity-card > p {
         padding-left: 20px;
         font-size: 1.2em;
         margin-top: 15px;
+    }
+    .activity-card,
+    .column {
+        flex-basis: 100%;
+    }
+    .activity-card > img {
+        height: 200px;
+    }
+    .activity-card {
+        height: 260px;
+        min-width: unset;
     }
 }
 
