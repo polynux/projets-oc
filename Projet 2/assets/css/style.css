@@ -423,18 +423,28 @@ form {
 }
 @media (max-width: 768px) {
     .popular-card {
-        min-width: 300px;
+        min-width: unset;
         width: 100%;
+    }
+    .popular-card > img {
+        max-width: 140px;
+        max-height: 170px;
     }
     .card {
         flex-basis: 100%;
         min-width: unset;
+    }
+    .cards {
+        width: auto !important;
     }
     .description {
         padding: 15px;
     }
     #popular {
         min-width: unset;
+    }
+    #places {
+        flex-direction: column;
     }
 }
 
@@ -460,10 +470,10 @@ form {
 */
 .column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 50px;
-    flex-grow: 1;
-    max-width: 33%;
+    flex: 1 0 20%;
 }
 .column > a {
     max-width: 100%;
@@ -486,11 +496,10 @@ form {
 .activity-card {
     border-radius: 30px;
     box-shadow: 0 3px 15px #d8d8d8;
-    flex-grow: 1;
-    min-width: 270px;
-    max-width: 23%;
+    min-width: 300px;
     height: 600px;
     transition: transform 0.5s;
+    flex: 1 0 20%;
 }
 
 .activity-card:hover {
@@ -521,29 +530,6 @@ form {
     height: 215px;
 }
 
-@media (max-width: 1674px) {
-    .activity-card {
-        max-width: 31%;
-    }
-    .col-2 {
-        flex-direction: row;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 1284px) {
-    .activity-card {
-        max-width: 48%;
-    }
-    .col-1 {
-        max-width: 48%;
-    }
-    .col-2 {
-        flex-direction: column;
-        max-width: 100%;
-    }
-}
-
 @media (max-width: 992px) {
     .activity-card > img {
         height: 544px;
@@ -557,27 +543,28 @@ form {
     .var-3 > img {
         height: 218px;
     }
+    .activity-card,
+    .column {
+        flex: 1 0 40%;
+    }
 }
 
-@media (max-width: 869px) {
-    .activity-card-list {
-        flex-direction: column;
-    }
-    .activity-card-list > * {
-        max-width: 100%;
-    }
-    .activity-card {
-        height: 260px;
-    }
-    .activity-card > img {
-        height: 200px;
-    }
-}
 @media (max-width: 768px) {
     .activity-card > p {
         padding-left: 20px;
         font-size: 1.2em;
         margin-top: 15px;
+    }
+    .activity-card,
+    .column {
+        flex-basis: 100%;
+    }
+    .activity-card > img {
+        height: 200px;
+    }
+    .activity-card {
+        height: 260px;
+        min-width: unset;
     }
 }
 
