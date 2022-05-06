@@ -1,0 +1,28 @@
+body {
+    font-family: "Roboto Regular", sans-serif;
+}
+
+* {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+
+.project {
+    margin: 30px;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            box-shadow: 3px 2px 15px 3px rgba($color: #000000, $alpha: 0.3);
+        }
+    }
+}
