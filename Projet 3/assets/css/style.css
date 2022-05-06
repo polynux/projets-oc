@@ -468,19 +468,27 @@ a {
 
 .menu .sub-menu {
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu .sub-menu h2 {
   text-transform: uppercase;
   font-weight: 200;
   font-size: 1.1em;
-  margin-bottom: 5px;
+  width: 100%;
 }
 
-.menu .sub-menu .title-underline {
+.menu .sub-menu h2 .title-underline {
   height: 3px;
   background-color: #99e2d0;
   width: 3em;
+  margin-top: 10px;
 }
 
 .menu .sub-menu input {
@@ -496,7 +504,7 @@ a {
           animation: check-rotation 0.5s;
 }
 
-.menu .card {
+.menu .sub-menu .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,27 +529,27 @@ a {
   opacity: 0;
 }
 
-.menu .card:nth-child(3) {
+.menu .sub-menu .card:nth-child(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.menu .card:nth-child(4) {
+.menu .sub-menu .card:nth-child(4) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.menu .card:nth-child(5) {
+.menu .sub-menu .card:nth-child(5) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.menu .card:nth-child(6) {
+.menu .sub-menu .card:nth-child(6) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.menu .card .description {
+.menu .sub-menu .card .description {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -549,14 +557,14 @@ a {
   margin-right: 15px;
 }
 
-.menu .card .description h3 {
+.menu .sub-menu .card .description h3 {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.menu .card .description p {
+.menu .sub-menu .card .description p {
   margin-top: 5px;
   margin-bottom: 5px;
   text-overflow: ellipsis;
@@ -564,11 +572,11 @@ a {
   white-space: nowrap;
 }
 
-.menu .card .price {
+.menu .sub-menu .card .price {
   font-weight: bold;
 }
 
-.menu .card .selector {
+.menu .sub-menu .card .selector {
   background-color: #99e2d0;
   color: white;
   padding: 22px 18px;
@@ -580,10 +588,28 @@ a {
   transition: margin-right 0.5s;
 }
 
-.menu .card:hover {
+.menu .sub-menu .card:hover {
   cursor: pointer;
   -webkit-box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
           box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
+}
+
+@media (min-width: 1024px) {
+  .menu .sub-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .menu .sub-menu label {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+  }
 }
 
 .menu .checkout {
