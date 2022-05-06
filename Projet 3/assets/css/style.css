@@ -581,7 +581,7 @@ a {
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: calc(100% - 130px);
-  margin-right: 15px;
+  margin-inline: 7px;
 }
 
 .menu .sub-menu .card .description span:first-child {
