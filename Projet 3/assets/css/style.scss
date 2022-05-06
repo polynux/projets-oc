@@ -370,6 +370,8 @@ a {
     padding-top: 1px;
 
     .sub-menu {
+        margin-bottom: 50px;
+
         h2 {
             text-transform: uppercase;
             font-weight: 200;
@@ -382,7 +384,19 @@ a {
             width: 3em;
         }
 
-        margin-bottom: 50px;
+        input {
+            display: none;
+
+            &:checked ~ .card {
+                .selector {
+                    margin-right: -10px;
+
+                    .fa-solid.fa-circle-check {
+                        animation: check-rotation 0.5s;
+                    }
+                }
+            }
+        }
     }
 
     .card {
@@ -443,14 +457,6 @@ a {
         &:hover {
             cursor: pointer;
             box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
-
-            .selector {
-                margin-right: -10px;
-
-                .fa-solid.fa-circle-check {
-                    animation: check-rotation 0.5s;
-                }
-            }
         }
     }
 

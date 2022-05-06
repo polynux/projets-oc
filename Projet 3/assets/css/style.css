@@ -479,6 +479,19 @@ a {
   width: 3em;
 }
 
+.menu .sub-menu input {
+  display: none;
+}
+
+.menu .sub-menu input:checked ~ .card .selector {
+  margin-right: -10px;
+}
+
+.menu .sub-menu input:checked ~ .card .selector .fa-solid.fa-circle-check {
+  -webkit-animation: check-rotation 0.5s;
+          animation: check-rotation 0.5s;
+}
+
 .menu .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -567,15 +580,6 @@ a {
   cursor: pointer;
   -webkit-box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
           box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
-}
-
-.menu .card:hover .selector {
-  margin-right: -10px;
-}
-
-.menu .card:hover .selector .fa-solid.fa-circle-check {
-  -webkit-animation: check-rotation 0.5s;
-          animation: check-rotation 0.5s;
 }
 
 .menu .checkout {
