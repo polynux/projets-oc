@@ -229,34 +229,43 @@ a {
 }
 
 .heart {
-    font-size: 2em;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    clip-path: path(
-        "M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z"
-    );
-    overflow: hidden;
+    .fa-heart {
+        font-size: 2em;
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        clip-path: path(
+            "M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z"
+        );
+        overflow: hidden;
 
-    .wave {
-        border-radius: 38%;
-        background: linear-gradient(-20deg, $rose, $purple);
-        width: 60px;
-        height: 60px;
-        position: relative;
-        left: -15px;
-        top: 0px;
-        transition: all 2s ease;
+        .wave {
+            border-radius: 38%;
+            background: linear-gradient(-20deg, $rose, $purple);
+            width: 60px;
+            height: 60px;
+            position: relative;
+            left: -15px;
+            top: 0px;
+            transition: all 2s ease;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    &:hover {
-        cursor: pointer;
-        .wave {
-            top: -34px;
-            animation: square-rotation 1.5s linear;
-            width: 1.1em;
-            height: 1.1em;
-            left: -1.5px;
+    input {
+        display: none;
+
+        &:checked ~ .fa-heart {
+            .wave {
+                top: -34px;
+                animation: square-rotation 1.5s linear;
+                width: 1.1em;
+                height: 1.1em;
+                left: -1.5px;
+            }
         }
     }
 }
