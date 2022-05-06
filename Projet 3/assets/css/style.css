@@ -4,6 +4,10 @@ body {
   font-family: "Roboto Regular", sans-serif;
 }
 
+span {
+  display: block;
+}
+
 @media (min-width: 992px) {
   section:not(.location, .explore) {
     max-width: 1300px;
@@ -98,6 +102,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px;
+  margin-bottom: -40px;
 }
 
 footer .logo {
@@ -293,8 +298,8 @@ a {
   width: 32px;
   height: 32px;
   vertical-align: middle;
-  -webkit-clip-path: path("M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z");
-          clip-path: path("M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z");
+  -webkit-clip-path: url("#heartClip");
+          clip-path: url("#heartClip");
   overflow: hidden;
 }
 
@@ -333,7 +338,22 @@ a {
   padding-bottom: 40px;
 }
 
-#restaurant-list .container {
+#restaurant-list .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#restaurant-list .card .card-content {
+  width: 100%;
+}
+
+#restaurant-list .card .container {
   border-radius: 20px;
   background-color: white;
   margin-bottom: 20px;
@@ -343,12 +363,12 @@ a {
   transition: all 0.4s;
 }
 
-#restaurant-list .container:hover {
+#restaurant-list .card .container:hover {
   -webkit-box-shadow: 6px 5px 14px 6px rgba(0, 0, 0, 0.4);
           box-shadow: 6px 5px 14px 6px rgba(0, 0, 0, 0.4);
 }
 
-#restaurant-list .container img {
+#restaurant-list .card .container img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -357,7 +377,7 @@ a {
   border-top-right-radius: 20px;
 }
 
-#restaurant-list .container .description {
+#restaurant-list .card .container .description {
   margin: 15px;
   margin-bottom: 0;
   display: -webkit-box;
@@ -365,21 +385,21 @@ a {
   display: flex;
 }
 
-#restaurant-list .container .description .text {
+#restaurant-list .card .container .description .text {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-#restaurant-list .container .description .text h3 {
+#restaurant-list .card .container .description .text h3 {
   margin: 0;
 }
 
-#restaurant-list .container .description .text p {
+#restaurant-list .card .container .description .text p {
   margin-top: 5px;
 }
 
-#restaurant-list .container .new {
+#restaurant-list .card .container .new {
   position: relative;
   top: -240px;
   margin-top: -30px;
@@ -392,7 +412,7 @@ a {
   padding-right: 10px;
 }
 
-#restaurant-list .container .new p {
+#restaurant-list .card .container .new p {
   background-color: #99e2d0;
   color: #119071;
   border-radius: 2px;
@@ -402,6 +422,13 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+#restaurant-list .card .heart {
+  position: relative;
+  top: -80px;
+  right: 20px;
+  height: 0;
 }
 
 @media (min-width: 992px) {
@@ -508,9 +535,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
   margin-top: 20px;
   border-radius: 20px;
@@ -557,14 +584,16 @@ a {
   margin-right: 15px;
 }
 
-.menu .sub-menu .card .description h3 {
+.menu .sub-menu .card .description span:first-child {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
-.menu .sub-menu .card .description p {
+.menu .sub-menu .card .description span:last-child {
   margin-top: 5px;
   margin-bottom: 5px;
   text-overflow: ellipsis;

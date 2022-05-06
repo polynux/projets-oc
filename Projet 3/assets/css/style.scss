@@ -11,6 +11,10 @@ body {
     font-family: "Roboto Regular", sans-serif;
 }
 
+span {
+    display: block;
+}
+
 @media (min-width: 992px) {
     section:not(.location, .explore) {
         max-width: 1300px;
@@ -85,6 +89,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: -40px;
     .logo {
         font-family: "Shrikhand", cursive;
         margin-bottom: 20px;
@@ -234,9 +239,7 @@ a {
         width: 32px;
         height: 32px;
         vertical-align: middle;
-        clip-path: path(
-            "M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z"
-        );
+        clip-path: url("#heartClip");
         overflow: hidden;
 
         .wave {
@@ -275,56 +278,73 @@ a {
     padding: 20px;
     padding-bottom: 40px;
 
-    .container {
-        border-radius: 20px;
-        background-color: white;
-        margin-bottom: 20px;
-        box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
-        transition: all 0.4s;
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
 
-        &:hover {
-            box-shadow: 6px 5px 14px 6px rgba(0, 0, 0, 0.4);
-        }
-
-        img {
-            object-fit: cover;
+        .card-content {
             width: 100%;
-            height: 200px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
         }
 
-        .description {
-            margin: 15px;
-            margin-bottom: 0;
-            display: flex;
-            .text {
-                flex-grow: 1;
-                h3 {
-                    margin: 0;
+        .container {
+            border-radius: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
+            transition: all 0.4s;
+
+            &:hover {
+                box-shadow: 6px 5px 14px 6px rgba(0, 0, 0, 0.4);
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 200px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .description {
+                margin: 15px;
+                margin-bottom: 0;
+                display: flex;
+                .text {
+                    flex-grow: 1;
+                    h3 {
+                        margin: 0;
+                    }
+                    p {
+                        margin-top: 5px;
+                    }
                 }
+            }
+
+            .new {
+                position: relative;
+                top: -240px;
+                margin-top: -30px;
+                display: flex;
+                justify-content: end;
+                padding-right: 10px;
                 p {
-                    margin-top: 5px;
+                    background-color: #99e2d0;
+                    color: #119071;
+                    border-radius: 2px;
+                    padding: 7px 15px;
+                    margin: 0;
+                    font-weight: bold;
+                    width: fit-content;
                 }
             }
         }
 
-        .new {
+        .heart {
             position: relative;
-            top: -240px;
-            margin-top: -30px;
-            display: flex;
-            justify-content: end;
-            padding-right: 10px;
-            p {
-                background-color: #99e2d0;
-                color: #119071;
-                border-radius: 2px;
-                padding: 7px 15px;
-                margin: 0;
-                font-weight: bold;
-                width: fit-content;
-            }
+            top: -80px;
+            right: 20px;
+            height: 0;
         }
     }
 
@@ -413,7 +433,7 @@ a {
 
         .card {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             background-color: white;
             margin-top: 20px;
             border-radius: 20px;
@@ -436,18 +456,23 @@ a {
                 width: calc(100% - 130px);
                 margin-right: 15px;
 
-                h3 {
-                    margin: 0;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                }
-                p {
-                    margin-top: 5px;
-                    margin-bottom: 5px;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
+                span {
+                    &:first-child {
+                        margin: 0;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+
+                    &:last-child {
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
                 }
             }
 

@@ -21,11 +21,11 @@
             </a>
         </header>
         <main>
-            <section class="location">
+            <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <div class="place"><p>Paris, Belleville</p></div>
                 <div></div>
-            </section>
+            </div>
             <section class="explore">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionés par nos soins.</p>
@@ -48,85 +48,96 @@
             </section>
             <section id="restaurant-list">
                 <h2>Restaurants</h2>
-                <a href="./la-palette-du-gout" class="card">
-                    <div class="container">
-                        <img
-                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                            alt="la-palette-du-gout"
-                        />
-                        <div class="description">
-                            <div class="text">
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                <div class="card">
+                    <a href="./la-palette-du-gout" class="card-content">
+                        <div class="container">
+                            <img
+                                src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="la-palette-du-gout"
+                            />
+                            <div class="description">
+                                <div class="text">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
                             </div>
-                            <label for="heart-1" class="heart">
-                                <input type="checkbox" id="heart-1" />
-                                <i class="fa-regular fa-heart">
-                                    <div class="wave"></div>
-                                </i>
-                            </label>
+                            <div class="new"><p>Nouveau</p></div>
                         </div>
-                        <div class="new"><p>Nouveau</p></div>
-                    </div>
-                </a>
-                <a href="./la-note-enchantee/" class="card">
-                    <div class="container">
-                        <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la-note-enchantee" />
-                        <div class="description">
-                            <div class="text">
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
+                    </a>
+                    <label for="heart-1" class="heart">
+                        <input type="checkbox" id="heart-1" />
+                        <i class="fa-regular fa-heart">
+                            <span class="wave"></span>
+                        </i>
+                    </label>
+                </div>
+                <div class="card">
+                    <a href="./la-note-enchantee/" class="card-content">
+                        <div class="container">
+                            <img
+                                src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="la-note-enchantee"
+                            />
+                            <div class="description">
+                                <div class="text">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </div>
                             </div>
-                            <label for="heart-2" class="heart">
-                                <input type="checkbox" id="heart-2" />
-                                <i class="fa-regular fa-heart">
-                                    <div class="wave"></div>
-                                </i>
-                            </label>
+                            <div class="new"><p>Nouveau</p></div>
                         </div>
-                        <div class="new"><p>Nouveau</p></div>
-                    </div>
-                </a>
-                <a href="./a-la-francaise/" class="card">
-                    <div class="container">
-                        <img
-                            src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                            alt="a-la-francaise"
-                        />
-                        <div class="description">
-                            <div class="text">
-                                <h3>À la française</h3>
-                                <p>Cité Rouge</p>
+                    </a>
+                    <label for="heart-2" class="heart">
+                        <input type="checkbox" id="heart-2" />
+                        <i class="fa-regular fa-heart">
+                            <span class="wave"></span>
+                        </i>
+                    </label>
+                </div>
+                <div class="card">
+                    <a href="./a-la-francaise/" class="card-content">
+                        <div class="container">
+                            <img
+                                src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt="a-la-francaise"
+                            />
+                            <div class="description">
+                                <div class="text">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </div>
                             </div>
-                            <label for="heart-3" class="heart">
-                                <input type="checkbox" id="heart-3" />
-                                <i class="fa-regular fa-heart">
-                                    <div class="wave"></div>
-                                </i>
-                            </label>
                         </div>
-                    </div>
-                </a>
-                <a href="./le-delice-des-sens/" class="card">
-                    <div class="container">
-                        <img
-                            src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                            alt="le-delice-des-sens"
-                        />
-                        <div class="description">
-                            <div class="text">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
+                    </a>
+                    <label for="heart-3" class="heart">
+                        <input type="checkbox" id="heart-3" />
+                        <i class="fa-regular fa-heart">
+                            <span class="wave"></span>
+                        </i>
+                    </label>
+                </div>
+                <div class="card">
+                    <a href="./le-delice-des-sens/" class="card-content">
+                        <div class="container">
+                            <img
+                                src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="le-delice-des-sens"
+                            />
+                            <div class="description">
+                                <div class="text">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
                             </div>
-                            <label for="heart-4" class="heart">
-                                <input type="checkbox" id="heart-4" />
-                                <i class="fa-regular fa-heart">
-                                    <div class="wave"></div>
-                                </i>
-                            </label>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                    <label for="heart-4" class="heart">
+                        <input type="checkbox" id="heart-4" />
+                        <i class="fa-regular fa-heart">
+                            <span class="wave"></span>
+                        </i>
+                    </label>
+                </div>
             </section>
         </main>
         <footer>
@@ -139,5 +150,14 @@
         <div class="loading-spinner">
             <img src="./assets/images/loading-spinner.svg" alt="loading-spinner" />
         </div>
+        <svg width="32px" height="32px">
+            <defs>
+                <clipPath id="heartClip">
+                    <path
+                        d="M 0,11.33066 V 10.953977 C 0,6.4143242 3.1575,2.5423102 7.4625,1.7967428 10.25625,1.3038106 13.2125,2.2688921 15.25,4.3893432 L 16,5.1673822 16.69375,4.3893432 C 18.7875,2.2688921 21.6875,1.3038106 24.5375,1.7967428 28.84375,2.5423102 32,6.4143242 32,10.953977 v 0.376683 c 0,2.695214 -1.075,5.273526 -2.975,7.111466 L 17.73125,29.39833 C 17.2625,29.852944 16.64375,30.106229 16,30.106229 c -0.64375,0 -1.2625,-0.253285 -1.73125,-0.707899 L 2.974375,18.442126 C 1.076875,16.604186 1.875e-5,14.025874 1.875e-5,11.33066 Z"
+                    />
+                </clipPath>
+            </defs>
+        </svg>
     </body>
 </html>
