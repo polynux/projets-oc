@@ -1,0 +1,48 @@
+@keyframes check-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes loading-menu {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes loading-spinner-init {
+    from {
+        opacity: 1;
+        z-index: 100;
+    }
+    to {
+        opacity: 1;
+        z-index: 100;
+    }
+}
+@keyframes loading-spinner {
+    from {
+        opacity: 1;
+        z-index: 100;
+    }
+    to {
+        opacity: 0;
+        z-index: 100;
+    }
+}
+
+@keyframes square-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

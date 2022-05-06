@@ -1,38 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-body {
-  margin: 0;
-  font-family: "Roboto Regular", sans-serif;
+@-webkit-keyframes check-rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
 }
-
-span {
-  display: block;
-}
-
-@media (min-width: 992px) {
-  section:not(.location, .explore) {
-    max-width: 1300px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+@keyframes check-rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
   }
 }
 
-.loading-spinner {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: white;
-  z-index: -100;
-  opacity: 0;
-  -webkit-animation: loading-spinner-init 1s, loading-spinner 1s ease-in-out 1s;
-          animation: loading-spinner-init 1s, loading-spinner 1s ease-in-out 1s;
+@-webkit-keyframes loading-menu {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.loading-spinner img {
-  position: fixed;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
+@keyframes loading-menu {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loading-spinner-init {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+@keyframes loading-spinner-init {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+@-webkit-keyframes loading-spinner {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 0;
+    z-index: 100;
+  }
+}
+
+@keyframes loading-spinner {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 0;
+    z-index: 100;
+  }
+}
+
+@-webkit-keyframes square-rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes square-rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 h2 {
@@ -128,6 +201,88 @@ footer a {
   }
 }
 
+.btn {
+  border-radius: 25px;
+  border: 0;
+  padding: 15px 20px;
+  margin-top: 20px;
+  background-image: linear-gradient(-20deg, #ff79da, #9356dc, #ff79da);
+  background-size: 150% 300%;
+  background-position-y: top;
+  color: white;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  min-width: 150px;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-position: right bottom;
+  -webkit-box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
+          box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
+}
+
+.heart .fa-heart {
+  font-size: 2em;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  -webkit-clip-path: url("#heartClip");
+          clip-path: url("#heartClip");
+  overflow: hidden;
+}
+
+.heart .fa-heart .wave {
+  border-radius: 38%;
+  background: linear-gradient(-20deg, #ff79da, #9356dc);
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: -15px;
+  top: 0px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.heart .fa-heart:hover {
+  cursor: pointer;
+}
+
+.heart input {
+  display: none;
+}
+
+.heart input:checked ~ .fa-heart .wave {
+  top: -34px;
+  -webkit-animation: square-rotation 1.5s linear;
+          animation: square-rotation 1.5s linear;
+  width: 1.1em;
+  height: 1.1em;
+  left: -1.5px;
+}
+
+.loading-spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: white;
+  z-index: -100;
+  opacity: 0;
+  -webkit-animation: loading-spinner-init 1s, loading-spinner 1s ease-in-out 1s;
+          animation: loading-spinner-init 1s, loading-spinner 1s ease-in-out 1s;
+}
+
+.loading-spinner img {
+  position: fixed;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+}
+
 .location {
   color: #353535;
   background-color: #eaeaea;
@@ -161,31 +316,6 @@ footer a {
 a {
   color: black;
   text-decoration: none;
-}
-
-.btn {
-  border-radius: 25px;
-  border: 0;
-  padding: 15px 20px;
-  margin-top: 20px;
-  background-image: linear-gradient(-20deg, #ff79da, #9356dc, #ff79da);
-  background-size: 150% 300%;
-  background-position-y: top;
-  color: white;
-  font-weight: 600;
-  -webkit-box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
-          box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.24);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  min-width: 150px;
-  text-align: center;
-}
-
-.btn:hover {
-  cursor: pointer;
-  background-position: right bottom;
-  -webkit-box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
-          box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
 }
 
 .explore {
@@ -291,45 +421,6 @@ a {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-}
-
-.heart .fa-heart {
-  font-size: 2em;
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-  -webkit-clip-path: url("#heartClip");
-          clip-path: url("#heartClip");
-  overflow: hidden;
-}
-
-.heart .fa-heart .wave {
-  border-radius: 38%;
-  background: linear-gradient(-20deg, #ff79da, #9356dc);
-  width: 60px;
-  height: 60px;
-  position: relative;
-  left: -15px;
-  top: 0px;
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease;
-}
-
-.heart .fa-heart:hover {
-  cursor: pointer;
-}
-
-.heart input {
-  display: none;
-}
-
-.heart input:checked ~ .fa-heart .wave {
-  top: -34px;
-  -webkit-animation: square-rotation 1.5s linear;
-          animation: square-rotation 1.5s linear;
-  width: 1.1em;
-  height: 1.1em;
-  left: -1.5px;
 }
 
 #restaurant-list {
@@ -655,113 +746,20 @@ a {
   margin-top: 10px;
 }
 
-@-webkit-keyframes check-rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
-  }
+body {
+  margin: 0;
+  font-family: "Roboto Regular", sans-serif;
 }
 
-@keyframes check-rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
-  }
+span {
+  display: block;
 }
 
-@-webkit-keyframes loading-menu {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
+@media (min-width: 992px) {
+  section:not(.location, .explore) {
+    max-width: 1300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-
-@keyframes loading-menu {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes loading-spinner-init {
-  from {
-    opacity: 1;
-    z-index: 100;
-  }
-  to {
-    opacity: 1;
-    z-index: 100;
-  }
-}
-
-@keyframes loading-spinner-init {
-  from {
-    opacity: 1;
-    z-index: 100;
-  }
-  to {
-    opacity: 1;
-    z-index: 100;
-  }
-}
-
-@-webkit-keyframes loading-spinner {
-  from {
-    opacity: 1;
-    z-index: 100;
-  }
-  to {
-    opacity: 0;
-    z-index: 100;
-  }
-}
-
-@keyframes loading-spinner {
-  from {
-    opacity: 1;
-    z-index: 100;
-  }
-  to {
-    opacity: 0;
-    z-index: 100;
-  }
-}
-
-@-webkit-keyframes square-rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes square-rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-/*# sourceMappingURL=style.css.map */
