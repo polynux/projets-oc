@@ -1,5 +1,24 @@
+body {
+    margin: 0;
+    font-family: "Roboto Regular", sans-serif;
+}
+
+span {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    section:not(.location, .explore) {
+        max-width: 1300px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 h2 {
     font-size: 1.6em;
+    color: #1d1d1d;
 }
 
 header {
@@ -93,6 +112,7 @@ footer {
         vertical-align: middle;
         clip-path: url("#heartClip");
         overflow: hidden;
+        color: #1d1d1d;
 
         .wave {
             border-radius: 38%;

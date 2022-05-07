@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 @-webkit-keyframes check-rotation {
   from {
     -webkit-transform: rotate(0deg);
@@ -108,8 +108,27 @@
   }
 }
 
+body {
+  margin: 0;
+  font-family: "Roboto Regular", sans-serif;
+}
+
+span {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  section:not(.location, .explore) {
+    max-width: 1300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 h2 {
   font-size: 1.6em;
+  color: #1d1d1d;
 }
 
 header {
@@ -234,6 +253,7 @@ footer a {
   -webkit-clip-path: url("#heartClip");
           clip-path: url("#heartClip");
   overflow: hidden;
+  color: #1d1d1d;
 }
 
 .heart .fa-heart .wave {
@@ -744,22 +764,4 @@ a {
 .menu .checkout .btn {
   margin: 40px 0;
   margin-top: 10px;
-}
-
-body {
-  margin: 0;
-  font-family: "Roboto Regular", sans-serif;
-}
-
-span {
-  display: block;
-}
-
-@media (min-width: 992px) {
-  section:not(.location, .explore) {
-    max-width: 1300px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }

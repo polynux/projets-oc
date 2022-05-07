@@ -1,20 +1,2 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 @import "var.scss", "keyframes.scss", "common.scss", "home.scss", "menu.scss";
-
-body {
-    margin: 0;
-    font-family: "Roboto Regular", sans-serif;
-}
-
-span {
-    display: block;
-}
-
-@media (min-width: 992px) {
-    section:not(.location, .explore) {
-        max-width: 1300px;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
