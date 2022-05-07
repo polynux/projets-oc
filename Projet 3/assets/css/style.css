@@ -608,10 +608,11 @@ a {
   width: 100%;
 }
 
-.menu .sub-menu .title-underline {
+.menu .sub-menu h2 .title-underline {
   height: 3px;
   background-color: #99e2d0;
   width: 3em;
+  margin-top: 10px;
 }
 
 .menu .sub-menu .card {
@@ -726,7 +727,7 @@ a {
     -webkit-column-gap: 20px;
             column-gap: 20px;
   }
-  .menu .sub-menu label {
+  .menu .sub-menu .card {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 30%;
             flex: 1 0 30%;

@@ -38,12 +38,13 @@
             font-weight: 200;
             font-size: 1.1em;
             width: 100%;
-        }
 
-        .title-underline {
-            height: 3px;
-            background-color: $green;
-            width: 3em;
+            .title-underline {
+                height: 3px;
+                background-color: $green;
+                width: 3em;
+                margin-top: 10px;
+            }
         }
 
         .card {
@@ -123,7 +124,7 @@
             flex-wrap: wrap;
             column-gap: 20px;
 
-            label {
+            .card {
                 flex: 1 0 30%;
             }
         }
