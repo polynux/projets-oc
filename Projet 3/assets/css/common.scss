@@ -104,43 +104,35 @@ footer {
     }
 }
 
-.heart {
-    .fa-heart {
-        font-size: 2em;
-        width: 32px;
-        height: 32px;
-        vertical-align: middle;
-        clip-path: url("#heartClip");
-        overflow: hidden;
-        color: #1d1d1d;
+.fa-heart {
+    font-size: 2em;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    clip-path: url("#heartClip");
+    overflow: hidden;
+    color: #1d1d1d;
 
-        .wave {
-            border-radius: 38%;
-            background: linear-gradient(-20deg, $rose, $purple);
-            width: 60px;
-            height: 60px;
-            position: relative;
-            left: -15px;
-            top: 0px;
-            transition: all 2s ease;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    .wave {
+        border-radius: 38%;
+        background: linear-gradient(-20deg, $rose, $purple);
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: -15px;
+        top: 0px;
+        transition: all 2s ease;
     }
 
-    input {
-        display: none;
+    &:hover {
+        cursor: pointer;
 
-        &:checked ~ .fa-heart {
-            .wave {
-                top: -34px;
-                animation: square-rotation 1.5s linear;
-                width: 1.1em;
-                height: 1.1em;
-                left: -1.5px;
-            }
+        .wave {
+            top: -34px;
+            animation: square-rotation 1.5s linear;
+            width: 1.1em;
+            height: 1.1em;
+            left: -1.5px;
         }
     }
 }

@@ -130,16 +130,13 @@ a {
         flex-wrap: wrap;
         justify-content: flex-end;
 
-        .card-content {
-            width: 100%;
-        }
-
         .container {
             border-radius: 20px;
             background-color: white;
             margin-bottom: 20px;
             box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
             transition: all 0.4s;
+            width: 100%;
 
             &:hover {
                 box-shadow: 6px 5px 14px 6px rgba(0, 0, 0, 0.4);
@@ -185,13 +182,6 @@ a {
                     width: fit-content;
                 }
             }
-        }
-
-        .heart {
-            position: relative;
-            top: -80px;
-            right: 20px;
-            height: 0;
         }
     }
 

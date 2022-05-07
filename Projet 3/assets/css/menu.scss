@@ -38,27 +38,12 @@
             font-weight: 200;
             font-size: 1.1em;
             width: 100%;
-
-            .title-underline {
-                height: 3px;
-                background-color: $green;
-                width: 3em;
-                margin-top: 10px;
-            }
         }
 
-        input {
-            display: none;
-
-            &:checked ~ .card {
-                .selector {
-                    margin-right: -10px;
-
-                    .fa-solid.fa-circle-check {
-                        animation: check-rotation 0.5s;
-                    }
-                }
-            }
+        .title-underline {
+            height: 3px;
+            background-color: $green;
+            width: 3em;
         }
 
         .card {
@@ -86,23 +71,21 @@
                 width: calc(100% - 130px);
                 margin-inline: 7px;
 
-                span {
-                    &:first-child {
-                        margin: 0;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        font-weight: bold;
-                        font-size: 1.1em;
-                    }
+                h3 {
+                    margin: 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    font-weight: bold;
+                    font-size: 1.1em;
+                }
 
-                    &:last-child {
-                        margin-top: 5px;
-                        margin-bottom: 5px;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                    }
+                p {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
             }
 
@@ -124,6 +107,14 @@
             &:hover {
                 cursor: pointer;
                 box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
+
+                .selector {
+                    margin-right: -10px;
+
+                    .fa-solid.fa-circle-check {
+                        animation: check-rotation 0.5s;
+                    }
+                }
             }
         }
 

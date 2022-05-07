@@ -245,7 +245,7 @@ footer a {
           box-shadow: 6px 5px 12px 3px rgba(0, 0, 0, 0.35);
 }
 
-.heart .fa-heart {
+.fa-heart {
   font-size: 2em;
   width: 32px;
   height: 32px;
@@ -256,7 +256,7 @@ footer a {
   color: #1d1d1d;
 }
 
-.heart .fa-heart .wave {
+.fa-heart .wave {
   border-radius: 38%;
   background: linear-gradient(-20deg, #ff79da, #9356dc);
   width: 60px;
@@ -268,15 +268,11 @@ footer a {
   transition: all 2s ease;
 }
 
-.heart .fa-heart:hover {
+.fa-heart:hover {
   cursor: pointer;
 }
 
-.heart input {
-  display: none;
-}
-
-.heart input:checked ~ .fa-heart .wave {
+.fa-heart:hover .wave {
   top: -34px;
   -webkit-animation: square-rotation 1.5s linear;
           animation: square-rotation 1.5s linear;
@@ -460,10 +456,6 @@ a {
           justify-content: flex-end;
 }
 
-#restaurant-list .card .card-content {
-  width: 100%;
-}
-
 #restaurant-list .card .container {
   border-radius: 20px;
   background-color: white;
@@ -472,6 +464,7 @@ a {
           box-shadow: 3px 5px 12px -5px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  width: 100%;
 }
 
 #restaurant-list .card .container:hover {
@@ -533,13 +526,6 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-#restaurant-list .card .heart {
-  position: relative;
-  top: -80px;
-  right: 20px;
-  height: 0;
 }
 
 @media (min-width: 992px) {
@@ -622,24 +608,10 @@ a {
   width: 100%;
 }
 
-.menu .sub-menu h2 .title-underline {
+.menu .sub-menu .title-underline {
   height: 3px;
   background-color: #99e2d0;
   width: 3em;
-  margin-top: 10px;
-}
-
-.menu .sub-menu input {
-  display: none;
-}
-
-.menu .sub-menu input:checked ~ .card .selector {
-  margin-right: -10px;
-}
-
-.menu .sub-menu input:checked ~ .card .selector .fa-solid.fa-circle-check {
-  -webkit-animation: check-rotation 0.5s;
-          animation: check-rotation 0.5s;
 }
 
 .menu .sub-menu .card {
@@ -695,7 +667,7 @@ a {
   margin-inline: 7px;
 }
 
-.menu .sub-menu .card .description span:first-child {
+.menu .sub-menu .card .description h3 {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -704,7 +676,7 @@ a {
   font-size: 1.1em;
 }
 
-.menu .sub-menu .card .description span:last-child {
+.menu .sub-menu .card .description p {
   margin-top: 5px;
   margin-bottom: 5px;
   text-overflow: ellipsis;
@@ -732,6 +704,15 @@ a {
   cursor: pointer;
   -webkit-box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
           box-shadow: 5px 8px 12px -4px rgba(0, 0, 0, 0.24);
+}
+
+.menu .sub-menu .card:hover .selector {
+  margin-right: -10px;
+}
+
+.menu .sub-menu .card:hover .selector .fa-solid.fa-circle-check {
+  -webkit-animation: check-rotation 0.5s;
+          animation: check-rotation 0.5s;
 }
 
 @media (min-width: 1024px) {
