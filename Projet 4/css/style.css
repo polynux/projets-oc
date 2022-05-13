@@ -148,8 +148,12 @@ a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
-.d-bloc .navbar-toggle .icon-bar {
+.d-bloc .navbar-toggle {
     background: rgba(255, 255, 255, 1);
+}
+
+.navbar-toggle .fa-bars {
+    font-size: 20px;
 }
 
 .d-bloc .btn-wire,
@@ -703,6 +707,8 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 h2 {
@@ -742,6 +748,8 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .portfolio-row {
