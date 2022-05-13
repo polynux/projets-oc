@@ -675,6 +675,11 @@ p {
     font-size: 11px;
 }
 
+.citation {
+    font-size: 19px;
+    line-height: normal;
+}
+
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
