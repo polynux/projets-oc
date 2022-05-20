@@ -10,12 +10,13 @@
         <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="./css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+        <link rel="preload" as="image" href="./img/agence-la-panthere.webp" type="image/webp" />
 
-        <script src="./js/jquery-2.1.0.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-        <script src="./js/blocs.min.js"></script>
-        <script src="./js/jqBootstrapValidation.min.js"></script>
-        <script src="./js/formHandler.min.js"></script>
+        <script src="./js/jquery-2.1.0.min.js" defer></script>
+        <script src="./js/bootstrap.min.js" defer></script>
+        <script src="./js/blocs.min.js" defer></script>
+        <script src="./js/jqBootstrapValidation.min.js" defer></script>
+        <script src="./js/formHandler.min.js" defer></script>
         <title>Contact | La Panthère</title>
 
         <!-- Analytics -->
@@ -90,19 +91,19 @@
                                 data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!"
                             >
                                 <div class="form-group">
-                                    <label> Nom </label>
+                                    <label for="name"> Nom </label>
                                     <input id="name" class="form-control" required />
                                 </div>
                                 <div class="form-group">
-                                    <label> Adresse email </label>
+                                    <label for="email"> Adresse email </label>
                                     <input id="email" class="form-control" type="email" required />
                                 </div>
                                 <div class="form-group">
-                                    <label> Comment nous avez-vous connu ? </label>
-                                    <input class="form-control" type="email" required id="input_504" />
+                                    <label for="how"> Comment nous avez-vous connu ? </label>
+                                    <input class="form-control" type="text" required id="how" />
                                 </div>
                                 <div class="form-group">
-                                    <label>
+                                    <label for="message">
                                         Brief de votre projet (Ajoutez autant de détails que nécessaire)<br /> </label
                                     ><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
                                 </div>
