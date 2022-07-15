@@ -30,6 +30,3 @@ const sauceSchema = new mongoose.Schema({
 
 let User = mongoose.model("User", userSchema);
 let Sauce = mongoose.model("Sauce", sauceSchema);
-
-let pseudo = new User({ email: "polynux", password: "password" });
-pseudo.save().then(() => console.log("enregistré")).catch(err => console.error(err));
